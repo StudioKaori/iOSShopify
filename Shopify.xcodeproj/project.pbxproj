@@ -13,6 +13,8 @@
 		434A739F28040BA500779518 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434A739D28040BA500779518 /* Main.storyboard */; };
 		434A73A128040BA700779518 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434A73A028040BA700779518 /* Assets.xcassets */; };
 		434A73A428040BA700779518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434A73A228040BA700779518 /* LaunchScreen.storyboard */; };
+		435572AA2804109D00F0924A /* apikey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 435572A92804109D00F0924A /* apikey.plist */; };
+		435572AC2804129500F0924A /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435572AB2804129500F0924A /* KeyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		434A73A028040BA700779518 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		434A73A328040BA700779518 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		434A73A528040BA700779518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		435572A92804109D00F0924A /* apikey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = apikey.plist; sourceTree = "<group>"; };
+		435572AB2804129500F0924A /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,7 @@
 		434A738B28040BA500779518 = {
 			isa = PBXGroup;
 			children = (
+				435572A92804109D00F0924A /* apikey.plist */,
 				434A739628040BA500779518 /* Shopify */,
 				434A739528040BA500779518 /* Products */,
 			);
@@ -56,6 +61,7 @@
 		434A739628040BA500779518 /* Shopify */ = {
 			isa = PBXGroup;
 			children = (
+				435572AB2804129500F0924A /* KeyManager.swift */,
 				434A739728040BA500779518 /* AppDelegate.swift */,
 				434A739928040BA500779518 /* SceneDelegate.swift */,
 				434A739B28040BA500779518 /* ViewController.swift */,
@@ -128,6 +134,7 @@
 				434A73A428040BA700779518 /* LaunchScreen.storyboard in Resources */,
 				434A73A128040BA700779518 /* Assets.xcassets in Resources */,
 				434A739F28040BA500779518 /* Main.storyboard in Resources */,
+				435572AA2804109D00F0924A /* apikey.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +148,7 @@
 				434A739C28040BA500779518 /* ViewController.swift in Sources */,
 				434A739828040BA500779518 /* AppDelegate.swift in Sources */,
 				434A739A28040BA500779518 /* SceneDelegate.swift in Sources */,
+				435572AC2804129500F0924A /* KeyManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
