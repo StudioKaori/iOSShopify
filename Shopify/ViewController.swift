@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        // Shopify storefront API doc: See 'Object' not 'Query' https://shopify.dev/api/storefront/2022-04/objects/Shop#fields
+        // Shopify storefront API doc: See 'Query' https://shopify.dev/api/storefront/2022-04/objects/Shop#fields
 
         let client = Graph.Client(
             shopDomain: KeyManager().getValue(key: "shopDomain") as! String,
@@ -45,12 +45,28 @@ class ViewController: UIViewController {
         // End of shop information
         
         // products information
+        // https://shopify.dev/api/storefront/2022-04/queries/products
+        // product field : https://shopify.dev/api/storefront/2022-04/objects/Product#fields
         let productsQuery = Storefront.buildQuery { $0
-            .products(first: 3) { $0
+            .products(first: 25) { $0
                 .edges { $0
                 .node { $0
-                    .id()
+                    .handle()
                     .title()
+                    .description()
+                    .featuredImage { $0
+                        .url()
+                    }
+                    .priceRange { $0
+                        .maxVariantPrice { $0
+                            .amount()
+                            .currencyCode()
+                        }
+                        .minVariantPrice{ $0
+                            .amount()
+                            .currencyCode()
+                        }
+                    }
                 }
                 }
             }
