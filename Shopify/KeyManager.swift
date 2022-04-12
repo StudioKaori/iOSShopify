@@ -9,7 +9,7 @@ import Foundation
 
 struct KeyManager {
 
-    private let keyFilePath = Bundle.main.path(forResource: "apiKey", ofType: "plist")
+    private let keyFilePath = Bundle.main.path(forResource: "apikey", ofType: "plist")
 
     func getKeys() -> NSDictionary? {
         guard let keyFilePath = keyFilePath else {

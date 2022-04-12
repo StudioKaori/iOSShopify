@@ -15,6 +15,8 @@
 		434A73A428040BA700779518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434A73A228040BA700779518 /* LaunchScreen.storyboard */; };
 		435572AA2804109D00F0924A /* apikey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 435572A92804109D00F0924A /* apikey.plist */; };
 		435572AC2804129500F0924A /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435572AB2804129500F0924A /* KeyManager.swift */; };
+		435572AF2804B32B00F0924A /* Buy in Frameworks */ = {isa = PBXBuildFile; productRef = 435572AE2804B32B00F0924A /* Buy */; };
+		435572B12804B32B00F0924A /* Pay in Frameworks */ = {isa = PBXBuildFile; productRef = 435572B02804B32B00F0924A /* Pay */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				435572AF2804B32B00F0924A /* Buy in Frameworks */,
+				435572B12804B32B00F0924A /* Pay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +93,10 @@
 			dependencies = (
 			);
 			name = Shopify;
+			packageProductDependencies = (
+				435572AE2804B32B00F0924A /* Buy */,
+				435572B02804B32B00F0924A /* Pay */,
+			);
 			productName = Shopify;
 			productReference = 434A739428040BA500779518 /* Shopify.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 434A738B28040BA500779518;
+			packageReferences = (
+				435572AD2804B32B00F0924A /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */,
+			);
 			productRefGroup = 434A739528040BA500779518 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -368,6 +379,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		435572AD2804B32B00F0924A /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/StudioKaori/mobile-buy-sdk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		435572AE2804B32B00F0924A /* Buy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 435572AD2804B32B00F0924A /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */;
+			productName = Buy;
+		};
+		435572B02804B32B00F0924A /* Pay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 435572AD2804B32B00F0924A /* XCRemoteSwiftPackageReference "mobile-buy-sdk-ios" */;
+			productName = Pay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 434A738C28040BA500779518 /* Project object */;
 }
