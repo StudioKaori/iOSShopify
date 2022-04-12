@@ -54,8 +54,12 @@ class ViewController: UIViewController {
                     .handle()
                     .title()
                     .description()
-                    .featuredImage { $0
-                        .url()
+                    .images(first: 5) { $0
+                        .edges { $0
+                            .node { $0
+                                .url()
+                            }
+                        }
                     }
                     .priceRange { $0
                         .maxVariantPrice { $0
