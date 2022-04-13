@@ -21,6 +21,7 @@ class ShopifyClient: NSObject {
 //    }
     
     static func getShopInfo() {
+        //static func getShopInfo(completion: @escaping(ShopInfoResult)->Void) {
         // Shop information
         let query = Storefront.buildQuery { $0
             .shop { $0
@@ -34,12 +35,18 @@ class ShopifyClient: NSObject {
         }
 
         let task = client.queryGraphWith(query) { response, error in
-            let name         = response?.shop.name
-            //let currencyCode = response?.shop.currencyCode
-            let moneyFormat  = response?.shop.moneyFormat
             
-            print(name)
-            print(moneyFormat)
+            guard let data = response else {
+                print("Json data error in getShopInfo")
+                return
+            }
+            
+            let shopInfo: ShopInfo = ShopInfo(name: data.shop.name)
+            
+            print("Shop info graphQL: ", data)
+            print("Shop info: ", shopInfo)
+            
+
         }
         task.resume()
     }
@@ -78,11 +85,26 @@ class ShopifyClient: NSObject {
                 }
         
                 let productsTask = client.queryGraphWith(productsQuery) { response, error in
-                    let response         = response
+                    
+                    // Unwrap response data
+                    guard let jsonData = response else {
+                        print("jsonData error in getProductInfor")
+                        return
+                    }
         
-                    print(response)
+                    print("hi", type(of: jsonData))
+                    print(jsonData.products)
                 }
                 productsTask.resume()
                 // End of products information
+    }
+    
+    struct ShopInfoResult: Codable{
+        var list: [ShopInfo]
+    }
+    
+    struct ShopInfo: Codable{
+        var name: String
+        //var moneyFormat: String
     }
 }
