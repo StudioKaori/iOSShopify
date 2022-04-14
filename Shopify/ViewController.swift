@@ -8,9 +8,9 @@
 import UIKit
 import Buy
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
-    @IBOutlet var productsTableView: UITableView!
+    @IBOutlet var productCollectionView: UICollectionView!
     
     var products: [Product] = []
     
@@ -30,39 +30,63 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             // UI change should be executed in the main thread
             DispatchQueue.main.async {
-                self.productsTableView.reloadData()
+                self.productCollectionView.reloadData()
             }
             
         }
 
     }
     
-
-    // return the numbers of products for generationg cells
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return products.count
+    // collection view delegate methods
+    // return numbers of images to generate the cells
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.products.count
     }
     
-    // fill each cells with weather forecast data
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = productsTableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath)
+    // set contents to each cell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let productImage = cell.viewWithTag(1) as? UIImageView
-        productImage?.image = UIImage(url: products[indexPath.row].images[0])
+        // get a cell object
+        let cell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath)
         
-        let productTitle = cell.viewWithTag(2) as? UILabel
-        productTitle?.text = products[indexPath.row].title
+        // tag is set in storyboard
+        if let productImage = cell.viewWithTag(1) as? UIImageView {
+            productImage.image = UIImage(url: products[indexPath.row].images[0])
+        }
         
-        
-//        let productPrice = cell.viewWithTag(3) as? UILabel
-//        productPrice?.text = products[indexPath.row].price
+        if let productTitle = cell.viewWithTag(2) as? UILabel {
+            productTitle.text = products[indexPath.row].title
+        }
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
-    }
+
+//    // return the numbers of products for generationg cells
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return products.count
+//    }
+//
+//    // fill each cells with weather forecast data
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = productsTableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath)
+//
+//        let productImage = cell.viewWithTag(1) as? UIImageView
+//        productImage?.image = UIImage(url: products[indexPath.row].images[0])
+//
+//        let productTitle = cell.viewWithTag(2) as? UILabel
+//        productTitle?.text = products[indexPath.row].title
+//
+//
+////        let productPrice = cell.viewWithTag(3) as? UILabel
+////        productPrice?.text = products[indexPath.row].price
+//
+//        return cell
+//    }
+//
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 300
+//    }
 
 
 }
