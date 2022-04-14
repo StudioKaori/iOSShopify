@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ShopifyClient.getShopInfo()
 
         ShopifyClient.getProducts(numbersOfProducts: 25) { (result) in
-            print("result: ", result)
+            //print("result: ", result)
             self.products = result
             
             // UI change should be executed in the main thread
@@ -45,10 +45,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // fill each cells with weather forecast data
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = productsTableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath)
+        let cell = productsTableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath)
+        
+        let productImage = cell.viewWithTag(1) as? UIImageView
+        productImage?.image = getImageByUrl(url: products[indexPath.row].images[0])
         
         let productTitle = cell.viewWithTag(2) as? UILabel
         productTitle?.text = products[indexPath.row].title
+        
         
 //        let productPrice = cell.viewWithTag(3) as? UILabel
 //        productPrice?.text = products[indexPath.row].price
@@ -60,5 +64,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 300
     }
 
+    func getImageByUrl(url: URL) -> UIImage{
+        do {
+            let data = try Data(contentsOf: url)
+            return UIImage(data: data)!
+        } catch let err {
+            print("Error : \(err.localizedDescription)")
+        }
+        return UIImage()
+    }
 }
 
