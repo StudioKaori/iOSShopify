@@ -48,7 +48,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = productsTableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath)
         
         let productImage = cell.viewWithTag(1) as? UIImageView
-        productImage?.image = getImageByUrl(url: products[indexPath.row].images[0])
+        productImage?.image = UIImage(url: products[indexPath.row].images[0])
         
         let productTitle = cell.viewWithTag(2) as? UILabel
         productTitle?.text = products[indexPath.row].title
@@ -64,14 +64,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 300
     }
 
-    func getImageByUrl(url: URL) -> UIImage{
-        do {
-            let data = try Data(contentsOf: url)
-            return UIImage(data: data)!
-        } catch let err {
-            print("Error : \(err.localizedDescription)")
-        }
-        return UIImage()
-    }
+
 }
 
