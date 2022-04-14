@@ -61,6 +61,12 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let spaceForCells: CGFloat = 3
+        let cellWidth: CGFloat = (self.view.bounds.width / 2) - (spaceForCells / 2)
+        let cellHeight: CGFloat = (cellWidth * 235 / 156)
+        return CGSize(width: cellWidth, height: cellHeight)
+    }
 
 //    // return the numbers of products for generationg cells
 //    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
