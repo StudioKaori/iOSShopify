@@ -51,7 +51,8 @@ class ShopifyClient: NSObject {
         task.resume()
     }
     
-    static func getProducts(numbersOfProducts: Int32) {
+    static func getProducts(numbersOfProducts: Int32) -> Array<Product> {
+        var products: [Product] = []
                 // products information
                 // https://shopify.dev/api/storefront/2022-04/queries/products
                 // product field : https://shopify.dev/api/storefront/2022-04/objects/Product#fields
@@ -92,7 +93,6 @@ class ShopifyClient: NSObject {
                         return
                     }
                     
-                    var products: [Product] = []
                     for item in data.products.edges {
                         
                         var images: [URL] = []
@@ -112,21 +112,23 @@ class ShopifyClient: NSObject {
                     
                 }
                 productsTask.resume()
+        
+        return products
                 // End of products information
     }
     
+}
+
+struct ShopInfo: Codable{
+    var name: String
+    //var moneyFormat: String
+}
+
+struct Product: Codable{
+    var title: String
+    var description: String
+    var price: Decimal
+    var images: [URL]
+    var handle: String
     
-    struct ShopInfo: Codable{
-        var name: String
-        //var moneyFormat: String
-    }
-    
-    struct Product: Codable{
-        var title: String
-        var description: String
-        var price: Decimal
-        var images: [URL]
-        var handle: String
-        
-    }
 }
