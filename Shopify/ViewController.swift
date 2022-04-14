@@ -12,19 +12,52 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet var productsTableView: UITableView!
     
-    var products: [Product]
+    var products: [Product] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        ShopifyClient.getShopInfo()
-        product = ShopifyClient.getProducts(numbersOfProducts: 25)
     }
+    
+    // viewWillAppear will notify before the view is about to be added to hierarchy
+    override func viewWillAppear(_ animated: Bool) {
+        ShopifyClient.getShopInfo()
 
-    // return the numbers of weather forecast for generationg cells
+        ShopifyClient.getProducts(numbersOfProducts: 25) { (result) in
+            print("result: ", result)
+            self.products = result
+            
+            // UI change should be executed in the main thread
+            DispatchQueue.main.async {
+                self.productsTableView.reloadData()
+            }
+            
+        }
+
+    }
+    
+
+    // return the numbers of products for generationg cells
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return products.count
+    }
+    
+    // fill each cells with weather forecast data
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = productsTableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath)
+        
+        let productTitle = cell.viewWithTag(2) as? UILabel
+        productTitle?.text = products[indexPath.row].title
+        
+//        let productPrice = cell.viewWithTag(3) as? UILabel
+//        productPrice?.text = products[indexPath.row].price
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300
     }
 
 }

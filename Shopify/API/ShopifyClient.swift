@@ -51,7 +51,7 @@ class ShopifyClient: NSObject {
         task.resume()
     }
     
-    static func getProducts(numbersOfProducts: Int32) -> Array<Product> {
+    static func getProducts(numbersOfProducts: Int32, completion: @escaping(Array<Product>)->Void){
         var products: [Product] = []
                 // products information
                 // https://shopify.dev/api/storefront/2022-04/queries/products
@@ -108,12 +108,12 @@ class ShopifyClient: NSObject {
                             handle: item.node.handle
                         )
                         products.append(product)
+                        completion(products)
                     }
                     
                 }
                 productsTask.resume()
-        
-        return products
+    
                 // End of products information
     }
     
