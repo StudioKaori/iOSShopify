@@ -87,24 +87,46 @@ class ShopifyClient: NSObject {
                 let productsTask = client.queryGraphWith(productsQuery) { response, error in
                     
                     // Unwrap response data
-                    guard let jsonData = response else {
+                    guard let data = response else {
                         print("jsonData error in getProductInfor")
                         return
                     }
-        
-                    print("hi", type(of: jsonData))
-                    print(jsonData.products)
+                    
+                    var products: [Product] = []
+                    for item in data.products.edges {
+                        
+                        var images: [URL] = []
+                        for image in item.node.images.edges {
+                            images.append(image.node.url)
+                        }
+                        
+                        let product: Product = Product(
+                            title: item.node.title,
+                            description: item.node.description,
+                            price: item.node.priceRange.maxVariantPrice.amount,
+                            images: images,
+                            handle: item.node.handle
+                        )
+                        products.append(product)
+                    }
+                    
                 }
                 productsTask.resume()
                 // End of products information
     }
     
-    struct ShopInfoResult: Codable{
-        var list: [ShopInfo]
-    }
     
     struct ShopInfo: Codable{
         var name: String
         //var moneyFormat: String
+    }
+    
+    struct Product: Codable{
+        var title: String
+        var description: String
+        var price: Decimal
+        var images: [URL]
+        var handle: String
+        
     }
 }
