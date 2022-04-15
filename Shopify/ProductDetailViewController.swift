@@ -28,21 +28,22 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
     private let scrollHight: CGFloat = 200.0
     private let imageWidth: CGFloat = UIScreen.main.bounds.width
     
-    private lazy var images: [UIImage] = {
-        return [
-            UIImage(named: "")!,
-            UIImage(named: "")!,
-            UIImage(named: "")!
-        ]
-    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("productDetail: ", product)
+        
         setupImages()
     }
     
     private func setupImages() {
+        
+        guard let images = product?.images else {
+            print("Cannot convert product images")
+            return
+        }
+        
         productImagesScrollView.contentSize = CGSize(width: imageWidth * CGFloat(images.count),
                                                      height: scrollHight)
         

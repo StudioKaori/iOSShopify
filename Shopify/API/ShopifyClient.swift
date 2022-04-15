@@ -95,9 +95,10 @@ class ShopifyClient: NSObject {
                     
                     for item in data.products.edges {
                         
-                        var images: [URL] = []
+                        var images: [UIImage] = []
                         for image in item.node.images.edges {
-                            images.append(image.node.url)
+                            let productImage = UIImage(url: image.node.url)
+                            images.append(productImage)
                         }
                         
                         let product: Product = Product(
@@ -124,11 +125,11 @@ struct ShopInfo: Codable{
     //var moneyFormat: String
 }
 
-struct Product: Codable{
+struct Product{
     var title: String
     var description: String
     var price: Decimal
-    var images: [URL]
+    var images: [UIImage]
     var handle: String
     
 }

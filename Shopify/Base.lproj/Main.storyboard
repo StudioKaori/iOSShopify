@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="95.652173913043484" y="116.51785714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Product Detail View Controller-->
         <scene sceneID="qHx-39-7Cf">
             <objects>
-                <viewController storyboardIdentifier="ProductDetail" id="C94-eJ-ler" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductDetail" id="C94-eJ-ler" customClass="ProductDetailViewController" customModule="Shopify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y8r-L1-l9B">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,7 +89,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Zv5-7g-aAF">
-                                        <rect key="frame" x="149" y="520" width="116" height="26"/>
+                                        <rect key="frame" x="149" y="19" width="116" height="26"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </pageControl>
                                 </subviews>
@@ -98,6 +98,10 @@
                         <viewLayoutGuide key="safeArea" id="WPT-PE-MT5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="productImagesPageControll" destination="Zv5-7g-aAF" id="N76-ps-87u"/>
+                        <outlet property="productImagesScrollView" destination="btV-yF-ISf" id="fDx-ui-guO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OzF-uO-U1G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

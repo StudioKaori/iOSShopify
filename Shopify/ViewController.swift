@@ -64,7 +64,7 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
         
         // tag is set in storyboard
         if let productImage = cell.viewWithTag(1) as? UIImageView {
-            productImage.image = UIImage(url: products[indexPath.row].images[0])
+            productImage.image = products[indexPath.row].images[0]
         }
         
         if let productTitle = cell.viewWithTag(2) as? UILabel {
