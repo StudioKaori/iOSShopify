@@ -20,6 +20,7 @@
 		435572B12804B32B00F0924A /* Pay in Frameworks */ = {isa = PBXBuildFile; productRef = 435572B02804B32B00F0924A /* Pay */; };
 		438EB8F42808860F009F783F /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB8F32808860F009F783F /* UIImageExtensions.swift */; };
 		438EB8F72808B392009F783F /* TilesCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB8F62808B392009F783F /* TilesCollectionViewFlowLayout.swift */; };
+		438EB8FB28093C97009F783F /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB8FA28093C97009F783F /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		435572AB2804129500F0924A /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
 		438EB8F32808860F009F783F /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		438EB8F62808B392009F783F /* TilesCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		438EB8FA28093C97009F783F /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				434A739728040BA500779518 /* AppDelegate.swift */,
 				434A739928040BA500779518 /* SceneDelegate.swift */,
 				434A739B28040BA500779518 /* ViewController.swift */,
+				438EB8FA28093C97009F783F /* ProductDetailViewController.swift */,
 				438EB8F62808B392009F783F /* TilesCollectionViewFlowLayout.swift */,
 				434A739D28040BA500779518 /* Main.storyboard */,
 				434A73A028040BA700779518 /* Assets.xcassets */,
@@ -186,6 +189,7 @@
 				434A739828040BA500779518 /* AppDelegate.swift in Sources */,
 				438EB8F42808860F009F783F /* UIImageExtensions.swift in Sources */,
 				438EB8F72808B392009F783F /* TilesCollectionViewFlowLayout.swift in Sources */,
+				438EB8FB28093C97009F783F /* ProductDetailViewController.swift in Sources */,
 				434A739A28040BA500779518 /* SceneDelegate.swift in Sources */,
 				435572AC2804129500F0924A /* KeyManager.swift in Sources */,
 			);
