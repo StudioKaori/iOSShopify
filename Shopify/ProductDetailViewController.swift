@@ -9,6 +9,8 @@ import UIKit
 
 class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
     
+    var product: Product?
+    
     @IBOutlet weak var productImagesScrollView: UIScrollView! {
         didSet {
             productImagesScrollView.delegate = self

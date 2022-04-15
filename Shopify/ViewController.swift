@@ -40,10 +40,20 @@ class ViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICo
 
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let productDetailViewController = segue.destination as? ProductDetailViewController {
+            productDetailViewController.product = sender as? Product
+        }
+    }
+    
     // collection view delegate methods
     // return numbers of images to generate the cells
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.products.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ProductlistToDetail", sender: products[indexPath.row])
     }
     
     // set contents to each cell

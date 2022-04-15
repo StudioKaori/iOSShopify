@@ -69,6 +69,7 @@
                     </view>
                     <connections>
                         <outlet property="productCollectionView" destination="G25-3M-n8b" id="0Yj-wq-hbe"/>
+                        <segue destination="C94-eJ-ler" kind="presentation" identifier="ProductlistToDetail" id="ikd-CW-rZx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -80,11 +81,11 @@
             <objects>
                 <viewController storyboardIdentifier="ProductDetail" id="C94-eJ-ler" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y8r-L1-l9B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btV-yF-ISf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="562"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="528"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Zv5-7g-aAF">
