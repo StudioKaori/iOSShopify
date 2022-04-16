@@ -16,6 +16,8 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
             productImagesScrollView.delegate = self
             productImagesScrollView.isPagingEnabled = true
             productImagesScrollView.showsHorizontalScrollIndicator = false
+            // Fix the scroll direction
+            productImagesScrollView.isDirectionalLockEnabled = true
         }
     }
     
@@ -25,7 +27,7 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    private let scrollHight: CGFloat = 200.0
+    private let scrollHight: CGFloat = UIScreen.main.bounds.height
     private let imageWidth: CGFloat = UIScreen.main.bounds.width
     
 
@@ -49,8 +51,10 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
         
         for (index, image) in images.enumerated() {
             let imageView = UIImageView(frame: CGRect(x: imageWidth * CGFloat(index), y: 0, width: imageWidth, height: scrollHight))
+            //let imageView = UIImageView()
             imageView.image = image
             imageView.contentMode = .scaleAspectFill
+            imageView.clipsToBounds = true
             productImagesScrollView.addSubview(imageView)
         }
         productImagesPageControll.numberOfPages = images.count

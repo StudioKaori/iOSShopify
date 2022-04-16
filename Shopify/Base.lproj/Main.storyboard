@@ -85,16 +85,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btV-yF-ISf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="528"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="Zv5-7g-aAF">
-                                <rect key="frame" x="137" y="50" width="140" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="Zv5-7g-aAF">
+                                <rect key="frame" x="0.0" y="90" width="414" height="26"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WPT-PE-MT5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zv5-7g-aAF" firstAttribute="top" secondItem="WPT-PE-MT5" secondAttribute="top" constant="90" id="7KR-Zd-VVX"/>
+                            <constraint firstItem="Zv5-7g-aAF" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" id="R92-xp-Tzb"/>
+                            <constraint firstItem="Zv5-7g-aAF" firstAttribute="top" secondItem="WPT-PE-MT5" secondAttribute="top" constant="90" id="Vah-rq-uwh"/>
+                            <constraint firstItem="WPT-PE-MT5" firstAttribute="trailing" secondItem="Zv5-7g-aAF" secondAttribute="trailing" id="dNv-Wd-1uE"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="productImagesPageControll" destination="Zv5-7g-aAF" id="GSd-vM-3KG"/>
