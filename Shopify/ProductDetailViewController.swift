@@ -54,6 +54,7 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
             productImagesScrollView.addSubview(imageView)
         }
         productImagesPageControll.numberOfPages = images.count
+        productImagesPageControll.currentPage = 0
 
     }
     

@@ -87,20 +87,18 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btV-yF-ISf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="528"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Zv5-7g-aAF">
-                                        <rect key="frame" x="149" y="19" width="116" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </pageControl>
-                                </subviews>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="Zv5-7g-aAF">
+                                <rect key="frame" x="137" y="50" width="140" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WPT-PE-MT5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="productImagesPageControll" destination="Zv5-7g-aAF" id="N76-ps-87u"/>
-                        <outlet property="productImagesScrollView" destination="btV-yF-ISf" id="fDx-ui-guO"/>
+                        <outlet property="productImagesPageControll" destination="Zv5-7g-aAF" id="GSd-vM-3KG"/>
+                        <outlet property="productImagesScrollView" destination="btV-yF-ISf" id="KEF-sz-68X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OzF-uO-U1G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
