@@ -39,7 +39,7 @@ class StampSelectViewController: UIViewController, UICollectionViewDelegateFlowL
     
     // set contents to each cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StampCell", for: <#T##IndexPath#>)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StampCell", for: indexPath)
         
         if let stampImageView = cell.viewWithTag(1) as? UIImageView {
             stampImageView.image = stampImages[indexPath.row]

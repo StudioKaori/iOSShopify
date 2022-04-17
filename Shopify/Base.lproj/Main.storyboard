@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="1005.7971014492755" y="856.47321428571422"/>
         </scene>
-        <!--View Controller-->
+        <!--Stamp Select View Controller-->
         <scene sceneID="ZSW-Sf-Rxu">
             <objects>
-                <viewController id="awz-p9-MqV" sceneMemberID="viewController">
+                <viewController id="awz-p9-MqV" customClass="StampSelectViewController" customModule="Shopify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="leY-L1-cvt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,13 +247,21 @@
                                         <size key="customSize" width="197" height="317"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="awz-p9-MqV" id="ljD-H5-igc"/>
+                                    <outlet property="delegate" destination="awz-p9-MqV" id="PXC-4a-kNr"/>
+                                </connections>
                             </collectionView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVo-I7-GSK">
                                 <rect key="frame" x="0.0" y="764" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WjM-X0-nIC"/>
-                                    <barButtonItem title="Cancel" id="fYu-25-fAI"/>
+                                    <barButtonItem title="Cancel" id="fYu-25-fAI">
+                                        <connections>
+                                            <action selector="closeWithSender:" destination="awz-p9-MqV" id="6u2-jY-YmO"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="7FZ-le-qct"/>
                                 </items>
                             </toolbar>
