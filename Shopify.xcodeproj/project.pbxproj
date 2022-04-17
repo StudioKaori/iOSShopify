@@ -22,6 +22,11 @@
 		438EB8F72808B392009F783F /* TilesCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB8F62808B392009F783F /* TilesCollectionViewFlowLayout.swift */; };
 		438EB8FB28093C97009F783F /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB8FA28093C97009F783F /* ProductDetailViewController.swift */; };
 		438EB8FD280BD021009F783F /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB8FC280BD021009F783F /* ProductListViewController.swift */; };
+		438EB905280C76FA009F783F /* stamp3.png in Resources */ = {isa = PBXBuildFile; fileRef = 438EB901280C76FA009F783F /* stamp3.png */; };
+		438EB906280C76FA009F783F /* stamp1.png in Resources */ = {isa = PBXBuildFile; fileRef = 438EB902280C76FA009F783F /* stamp1.png */; };
+		438EB907280C76FA009F783F /* stamp2.png in Resources */ = {isa = PBXBuildFile; fileRef = 438EB903280C76FA009F783F /* stamp2.png */; };
+		438EB908280C76FA009F783F /* stamp4.png in Resources */ = {isa = PBXBuildFile; fileRef = 438EB904280C76FA009F783F /* stamp4.png */; };
+		438EB90B280C773D009F783F /* StampSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB90A280C773D009F783F /* StampSelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		438EB8F62808B392009F783F /* TilesCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		438EB8FA28093C97009F783F /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		438EB8FC280BD021009F783F /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		438EB901280C76FA009F783F /* stamp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp3.png; sourceTree = "<group>"; };
+		438EB902280C76FA009F783F /* stamp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp1.png; sourceTree = "<group>"; };
+		438EB903280C76FA009F783F /* stamp2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp2.png; sourceTree = "<group>"; };
+		438EB904280C76FA009F783F /* stamp4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp4.png; sourceTree = "<group>"; };
+		438EB90A280C773D009F783F /* StampSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampSelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 		434A738B28040BA500779518 = {
 			isa = PBXGroup;
 			children = (
+				438EB909280C7703009F783F /* images */,
 				435572A92804109D00F0924A /* apikey.plist */,
 				434A739628040BA500779518 /* Shopify */,
 				434A739528040BA500779518 /* Products */,
@@ -112,6 +123,7 @@
 				434A739B28040BA500779518 /* ViewController.swift */,
 				438EB8FC280BD021009F783F /* ProductListViewController.swift */,
 				438EB8FA28093C97009F783F /* ProductDetailViewController.swift */,
+				438EB90A280C773D009F783F /* StampSelectViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -130,6 +142,17 @@
 				438EB8F62808B392009F783F /* TilesCollectionViewFlowLayout.swift */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		438EB909280C7703009F783F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				438EB902280C76FA009F783F /* stamp1.png */,
+				438EB903280C76FA009F783F /* stamp2.png */,
+				438EB901280C76FA009F783F /* stamp3.png */,
+				438EB904280C76FA009F783F /* stamp4.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,10 +220,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438EB907280C76FA009F783F /* stamp2.png in Resources */,
 				434A73A428040BA700779518 /* LaunchScreen.storyboard in Resources */,
 				434A73A128040BA700779518 /* Assets.xcassets in Resources */,
 				434A739F28040BA500779518 /* Main.storyboard in Resources */,
+				438EB906280C76FA009F783F /* stamp1.png in Resources */,
 				435572AA2804109D00F0924A /* apikey.plist in Resources */,
+				438EB908280C76FA009F783F /* stamp4.png in Resources */,
+				438EB905280C76FA009F783F /* stamp3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +244,7 @@
 				434A739828040BA500779518 /* AppDelegate.swift in Sources */,
 				438EB8F42808860F009F783F /* UIImageExtensions.swift in Sources */,
 				438EB8F72808B392009F783F /* TilesCollectionViewFlowLayout.swift in Sources */,
+				438EB90B280C773D009F783F /* StampSelectViewController.swift in Sources */,
 				438EB8FB28093C97009F783F /* ProductDetailViewController.swift in Sources */,
 				434A739A28040BA500779518 /* SceneDelegate.swift in Sources */,
 				435572AC2804129500F0924A /* KeyManager.swift in Sources */,
