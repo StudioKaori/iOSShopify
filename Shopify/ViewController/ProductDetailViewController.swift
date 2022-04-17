@@ -72,7 +72,7 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
         self.navigationController!.popViewController(animated: true)
     }
     
-    // executed before the view is added to hieralchy
+    // executed before the view is added to hierarchy
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

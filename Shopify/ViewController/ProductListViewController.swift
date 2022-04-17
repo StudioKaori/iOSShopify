@@ -37,6 +37,9 @@ class ProductListViewController: UIViewController, UICollectionViewDelegateFlowL
             }
             
         }
+        
+        // show navigationbar
+        self.navigationController!.setNavigationBarHidden(false, animated: false)
 
     }
     
@@ -73,40 +76,6 @@ class ProductListViewController: UIViewController, UICollectionViewDelegateFlowL
         
         return cell
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let spaceForCells: CGFloat = 3
-//        let cellWidth: CGFloat = (self.view.bounds.width / 2) - (spaceForCells / 2)
-//        let cellHeight: CGFloat = (cellWidth * 235 / 156)
-//        return CGSize(width: cellWidth, height: cellHeight)
-//    }
-
-//    // return the numbers of products for generationg cells
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return products.count
-//    }
-//
-//    // fill each cells with weather forecast data
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = productsTableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath)
-//
-//        let productImage = cell.viewWithTag(1) as? UIImageView
-//        productImage?.image = UIImage(url: products[indexPath.row].images[0])
-//
-//        let productTitle = cell.viewWithTag(2) as? UILabel
-//        productTitle?.text = products[indexPath.row].title
-//
-//
-////        let productPrice = cell.viewWithTag(3) as? UILabel
-////        productPrice?.text = products[indexPath.row].price
-//
-//        return cell
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 300
-//    }
-
 
 }
 

@@ -89,12 +89,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="Zv5-7g-aAF">
-                                <rect key="frame" x="0.0" y="178" width="414" height="26"/>
+                                <rect key="frame" x="0.0" y="816" width="414" height="26"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHs-UT-p8I">
-                                <rect key="frame" x="40" y="128" width="37" height="31"/>
+                                <rect key="frame" x="10" y="98" width="37" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="backToPreviousPage" destination="C94-eJ-ler" eventType="touchUpInside" id="jy9-so-xzn"/>
                                 </connections>
@@ -103,15 +105,14 @@
                         <viewLayoutGuide key="safeArea" id="WPT-PE-MT5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Zv5-7g-aAF" firstAttribute="top" secondItem="WPT-PE-MT5" secondAttribute="top" constant="90" id="7KR-Zd-VVX"/>
+                            <constraint firstItem="WPT-PE-MT5" firstAttribute="bottom" secondItem="Zv5-7g-aAF" secondAttribute="bottom" constant="20" id="4Jh-SE-SIx"/>
                             <constraint firstItem="btV-yF-ISf" firstAttribute="top" secondItem="y8r-L1-l9B" secondAttribute="top" id="Gz7-mA-6v8"/>
-                            <constraint firstItem="XHs-UT-p8I" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" constant="40" id="Mg4-Wr-Dbf"/>
+                            <constraint firstItem="XHs-UT-p8I" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" constant="10" id="Mg4-Wr-Dbf"/>
                             <constraint firstItem="Zv5-7g-aAF" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" id="R92-xp-Tzb"/>
-                            <constraint firstItem="Zv5-7g-aAF" firstAttribute="top" secondItem="WPT-PE-MT5" secondAttribute="top" constant="90" id="Vah-rq-uwh"/>
                             <constraint firstItem="btV-yF-ISf" firstAttribute="trailing" secondItem="WPT-PE-MT5" secondAttribute="trailing" id="Ysk-ry-O7r"/>
                             <constraint firstItem="WPT-PE-MT5" firstAttribute="trailing" secondItem="Zv5-7g-aAF" secondAttribute="trailing" id="dNv-Wd-1uE"/>
                             <constraint firstAttribute="bottom" secondItem="btV-yF-ISf" secondAttribute="bottom" id="haG-0W-4p3"/>
-                            <constraint firstItem="XHs-UT-p8I" firstAttribute="top" secondItem="WPT-PE-MT5" secondAttribute="top" constant="40" id="lci-3X-aRu"/>
+                            <constraint firstItem="XHs-UT-p8I" firstAttribute="top" secondItem="WPT-PE-MT5" secondAttribute="top" constant="10" id="lci-3X-aRu"/>
                             <constraint firstItem="btV-yF-ISf" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" id="zno-c5-0Gw"/>
                         </constraints>
                     </view>
