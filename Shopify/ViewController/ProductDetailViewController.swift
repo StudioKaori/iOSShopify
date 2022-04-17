@@ -16,8 +16,10 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
             productImagesScrollView.delegate = self
             productImagesScrollView.isPagingEnabled = true
             productImagesScrollView.showsHorizontalScrollIndicator = false
+            productImagesScrollView.showsVerticalScrollIndicator = false
             // Fix the scroll direction
             productImagesScrollView.isDirectionalLockEnabled = true
+            
         }
     }
     

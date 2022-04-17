@@ -85,9 +85,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="btV-yF-ISf">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="scrollableAxes" maximumZoomScale="3" translatesAutoresizingMaskIntoConstraints="NO" id="btV-yF-ISf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="Zv5-7g-aAF">
                                 <rect key="frame" x="0.0" y="178" width="414" height="26"/>
@@ -97,9 +96,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Zv5-7g-aAF" firstAttribute="top" secondItem="WPT-PE-MT5" secondAttribute="top" constant="90" id="7KR-Zd-VVX"/>
+                            <constraint firstItem="btV-yF-ISf" firstAttribute="top" secondItem="y8r-L1-l9B" secondAttribute="top" id="Gz7-mA-6v8"/>
                             <constraint firstItem="Zv5-7g-aAF" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" id="R92-xp-Tzb"/>
                             <constraint firstItem="Zv5-7g-aAF" firstAttribute="top" secondItem="WPT-PE-MT5" secondAttribute="top" constant="90" id="Vah-rq-uwh"/>
+                            <constraint firstItem="btV-yF-ISf" firstAttribute="trailing" secondItem="WPT-PE-MT5" secondAttribute="trailing" id="Ysk-ry-O7r"/>
                             <constraint firstItem="WPT-PE-MT5" firstAttribute="trailing" secondItem="Zv5-7g-aAF" secondAttribute="trailing" id="dNv-Wd-1uE"/>
+                            <constraint firstAttribute="bottom" secondItem="btV-yF-ISf" secondAttribute="bottom" id="haG-0W-4p3"/>
+                            <constraint firstItem="btV-yF-ISf" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" id="zno-c5-0Gw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zat-1g-7lA"/>
