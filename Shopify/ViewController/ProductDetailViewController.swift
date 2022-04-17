@@ -11,6 +11,8 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
     
     var product: Product?
     
+    @IBOutlet var backButton: UIButton!
+    
     @IBOutlet weak var productImagesScrollView: UIScrollView! {
         didSet {
             productImagesScrollView.delegate = self
@@ -64,6 +66,13 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
 
     }
     
+    
+    // back button
+    @IBAction func backToPreviousPage() {
+        self.navigationController!.popViewController(animated: true)
+    }
+    
+    // executed before the view is added to hieralchy
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
