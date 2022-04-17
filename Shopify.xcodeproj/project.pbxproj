@@ -75,17 +75,17 @@
 		434A739628040BA500779518 /* Shopify */ = {
 			isa = PBXGroup;
 			children = (
-				435572AB2804129500F0924A /* KeyManager.swift */,
-				438EB8F62808B392009F783F /* TilesCollectionViewFlowLayout.swift */,
 				434A739728040BA500779518 /* AppDelegate.swift */,
 				434A739928040BA500779518 /* SceneDelegate.swift */,
+				43503050280689A600191E59 /* API */,
+				438EB900280BEB0B009F783F /* Layout */,
+				438EB8FF280BEAE4009F783F /* Helper */,
+				438EB8F528088659009F783F /* Extensions */,
 				438EB8FE280BEA34009F783F /* ViewController */,
 				434A739D28040BA500779518 /* Main.storyboard */,
 				434A73A028040BA700779518 /* Assets.xcassets */,
 				434A73A228040BA700779518 /* LaunchScreen.storyboard */,
 				434A73A528040BA700779518 /* Info.plist */,
-				43503050280689A600191E59 /* API */,
-				438EB8F528088659009F783F /* Extensions */,
 			);
 			path = Shopify;
 			sourceTree = "<group>";
@@ -114,6 +114,22 @@
 				438EB8FC280BD021009F783F /* ProductListViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		438EB8FF280BEAE4009F783F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				435572AB2804129500F0924A /* KeyManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		438EB900280BEB0B009F783F /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				438EB8F62808B392009F783F /* TilesCollectionViewFlowLayout.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
