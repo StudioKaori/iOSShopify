@@ -62,6 +62,17 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController!.setNavigationBarHidden(true, animated: false)
+        
+//        self.navigationController!.navigationBar.tintColor = UIColor.white
+//        self.navigationController!.navigationBar.barTintColor = UIColor.white
+//        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        self.navigationController!.navigationBar.shadowImage = UIImage()
+    }
+    
     // MARK: UIScrollViewDelegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         productImagesPageControll.currentPage = Int(scrollView.contentOffset.x / scrollView.frame.width)
