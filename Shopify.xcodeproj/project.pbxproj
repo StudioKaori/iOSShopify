@@ -27,6 +27,8 @@
 		438EB907280C76FA009F783F /* stamp2.png in Resources */ = {isa = PBXBuildFile; fileRef = 438EB903280C76FA009F783F /* stamp2.png */; };
 		438EB908280C76FA009F783F /* stamp4.png in Resources */ = {isa = PBXBuildFile; fileRef = 438EB904280C76FA009F783F /* stamp4.png */; };
 		438EB90B280C773D009F783F /* StampSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB90A280C773D009F783F /* StampSelectViewController.swift */; };
+		438EB90E280CB6A0009F783F /* StampBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB90D280CB6A0009F783F /* StampBaseView.swift */; };
+		438EB910280CB763009F783F /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB90F280CB763009F783F /* StampView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		438EB903280C76FA009F783F /* stamp2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp2.png; sourceTree = "<group>"; };
 		438EB904280C76FA009F783F /* stamp4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp4.png; sourceTree = "<group>"; };
 		438EB90A280C773D009F783F /* StampSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampSelectViewController.swift; sourceTree = "<group>"; };
+		438EB90D280CB6A0009F783F /* StampBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampBaseView.swift; sourceTree = "<group>"; };
+		438EB90F280CB763009F783F /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 		434A739628040BA500779518 /* Shopify */ = {
 			isa = PBXGroup;
 			children = (
+				438EB90C280CB677009F783F /* Views */,
 				434A739728040BA500779518 /* AppDelegate.swift */,
 				434A739928040BA500779518 /* SceneDelegate.swift */,
 				43503050280689A600191E59 /* API */,
@@ -153,6 +158,15 @@
 				438EB904280C76FA009F783F /* stamp4.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		438EB90C280CB677009F783F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				438EB90D280CB6A0009F783F /* StampBaseView.swift */,
+				438EB90F280CB763009F783F /* StampView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438EB90E280CB6A0009F783F /* StampBaseView.swift in Sources */,
 				434A739C28040BA500779518 /* ViewController.swift in Sources */,
+				438EB910280CB763009F783F /* StampView.swift in Sources */,
 				438EB8FD280BD021009F783F /* ProductListViewController.swift in Sources */,
 				4350304F280689A100191E59 /* ShopifyClient.swift in Sources */,
 				434A739828040BA500779518 /* AppDelegate.swift in Sources */,
