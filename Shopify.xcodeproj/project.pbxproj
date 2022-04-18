@@ -30,6 +30,7 @@
 		438EB90E280CB6A0009F783F /* StampBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB90D280CB6A0009F783F /* StampBaseView.swift */; };
 		438EB910280CB763009F783F /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB90F280CB763009F783F /* StampView.swift */; };
 		438EB912280D2643009F783F /* FittingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB911280D2643009F783F /* FittingRoomViewController.swift */; };
+		438EB914280DC530009F783F /* StampScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB913280DC530009F783F /* StampScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		438EB90D280CB6A0009F783F /* StampBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampBaseView.swift; sourceTree = "<group>"; };
 		438EB90F280CB763009F783F /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = "<group>"; };
 		438EB911280D2643009F783F /* FittingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FittingRoomViewController.swift; sourceTree = "<group>"; };
+		438EB913280DC530009F783F /* StampScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				438EB90D280CB6A0009F783F /* StampBaseView.swift */,
+				438EB913280DC530009F783F /* StampScrollView.swift */,
 				438EB90F280CB763009F783F /* StampView.swift */,
 			);
 			path = Views;
@@ -262,6 +265,7 @@
 				438EB8FD280BD021009F783F /* ProductListViewController.swift in Sources */,
 				4350304F280689A100191E59 /* ShopifyClient.swift in Sources */,
 				434A739828040BA500779518 /* AppDelegate.swift in Sources */,
+				438EB914280DC530009F783F /* StampScrollView.swift in Sources */,
 				438EB8F42808860F009F783F /* UIImageExtensions.swift in Sources */,
 				438EB8F72808B392009F783F /* TilesCollectionViewFlowLayout.swift in Sources */,
 				438EB90B280C773D009F783F /* StampSelectViewController.swift in Sources */,
