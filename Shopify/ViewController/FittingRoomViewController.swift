@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FittingRoomViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerController, StampSelectViewControllerDelegate {
+class FittingRoomViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, StampSelectViewControllerDelegate {
     
     @IBOutlet var stampBaseView: StampBaseView!
 
@@ -24,7 +24,7 @@ class FittingRoomViewController: UIViewController, UINavigationControllerDelegat
     }
     
     @IBAction func cameraTapped(sender: UIButton) {
-        
+        showSourceSelection()
     }
     
     @IBAction func stampTapped(sender: UIButton) {
@@ -73,5 +73,39 @@ class FittingRoomViewController: UIViewController, UINavigationControllerDelegat
         self.present(alert, animated: true, completion: nil)
     }
 
-
+    // delegate methods
+    // This is executed when the image is picked
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            stampBaseView.setBackgroundImage(image: pickedImage)
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func confirmSave() {
+        let alert = UIAlertController(title: "Save Image", message: "Would you like to save the image?", preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default) { (action: UIAlertAction!) in
+            self.stampBaseView.saveImageWithStamps()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action: UIAlertAction!) in
+            print("Save canceled")
+        }
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    // delegate method
+    func didSelectStamp(stampImage: UIImage) {
+        stampBaseView.addStamp(stampImage: stampImage)
+    }
 }
