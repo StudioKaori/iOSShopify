@@ -8,6 +8,8 @@
 import UIKit
 
 class FittingRoomViewController: UIViewController, UIImagePickerController, StampSelectViewControllerDelegate {
+    
+    @IBOutlet var stampBaseView: StampBaseView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,15 +17,27 @@ class FittingRoomViewController: UIViewController, UIImagePickerController, Stam
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let stampSelectVC = segue.destination as? StampSelectViewController {
+            stampSelectVC.delegate = self
+        }
     }
-    */
+    
+    @IBAction func cameraTapped(sender: UIButton) {
+        
+    }
+    
+    @IBAction func stampTapped(sender: UIButton) {
+        performSegue(withIdentifier: "FittingRoomToStamp", sender: nil)
+    }
+    
+    @IBAction func deleteTapped(sender: UIButton) {
+        stampBaseView.deleteStamp()
+    }
+    
+    @IBAction func saveTapped(){
+        
+    }
+
 
 }
