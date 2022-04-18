@@ -166,15 +166,15 @@
             </objects>
             <point key="canvasLocation" x="-200.00000000000003" y="116.51785714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Fitting Room View Controller-->
         <scene sceneID="0ud-K0-RyS">
             <objects>
-                <viewController id="3Ke-xP-P0h" sceneMemberID="viewController">
+                <viewController id="3Ke-xP-P0h" customClass="FittingRoomViewController" customModule="Shopify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SsU-fN-YYt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t0A-iY-NCE">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t0A-iY-NCE" customClass="StampBaseView" customModule="Shopify" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -184,6 +184,9 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="backgroundImageView" destination="6Y0-Ht-eyj" id="zLd-Aa-tK0"/>
+                                </connections>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XGN-wi-8VJ">
                                 <rect key="frame" x="0.0" y="818" width="414" height="44"/>
@@ -207,6 +210,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="K1n-hq-VXD"/>
+                    <connections>
+                        <outlet property="stampBaseView" destination="t0A-iY-NCE" id="UT3-0a-3VT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DvG-WO-ZRX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
