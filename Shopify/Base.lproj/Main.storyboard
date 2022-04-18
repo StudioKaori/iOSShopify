@@ -288,6 +288,9 @@
                         <viewLayoutGuide key="safeArea" id="V1N-gZ-WVk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="stampCollectionView" destination="9oS-mj-md9" id="Hh8-mS-Bm8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fc7-b2-THC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

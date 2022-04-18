@@ -15,10 +15,15 @@ class StampSelectViewController: UIViewController, UICollectionViewDelegateFlowL
     
     var stampImages = [UIImage]()
     
+    @IBOutlet var stampCollectionView: UICollectionView!
+    
     weak var delegate: StampSelectViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tilesCollectionViewFlowLayout = TilesCollectionViewFlowLayout()
+        stampCollectionView.collectionViewLayout = tilesCollectionViewFlowLayout
 
         for i in 1...4 {
             if let image = UIImage(named: "stamp\(i).png"){
