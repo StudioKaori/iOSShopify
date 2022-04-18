@@ -36,7 +36,7 @@ class FittingRoomViewController: UIViewController, UINavigationControllerDelegat
     }
     
     @IBAction func saveTapped(){
-        
+        confirmSave()
     }
     
     func pickImage(sourceType: UIImagePickerController.SourceType) {

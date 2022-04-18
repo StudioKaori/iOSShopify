@@ -192,17 +192,30 @@
                                 <rect key="frame" x="0.0" y="818" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" image="camera" catalog="system" id="xHM-B2-9hX"/>
+                                    <barButtonItem title="Item" image="camera" catalog="system" id="xHM-B2-9hX">
+                                        <connections>
+                                            <action selector="cameraTappedWithSender:" destination="3Ke-xP-P0h" id="uvW-no-LsC"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ghS-ez-nXn"/>
                                     <barButtonItem title="Item" image="plus" catalog="system" id="OSf-DY-T3w">
                                         <connections>
+                                            <action selector="stampTappedWithSender:" destination="3Ke-xP-P0h" id="J1P-UO-5Fb"/>
                                             <segue destination="awz-p9-MqV" kind="presentation" identifier="FittingRoomToStamp" id="aA0-16-8pY"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Rg6-c0-CDE"/>
-                                    <barButtonItem title="Item" image="trash" catalog="system" id="dbZ-ZS-eHL"/>
+                                    <barButtonItem title="Item" image="trash" catalog="system" id="dbZ-ZS-eHL">
+                                        <connections>
+                                            <action selector="deleteTappedWithSender:" destination="3Ke-xP-P0h" id="Oj8-Tb-Jsf"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="0ql-Xw-Q4x"/>
-                                    <barButtonItem title="Item" image="folder" catalog="system" id="Wam-gT-PRq"/>
+                                    <barButtonItem title="Item" image="folder" catalog="system" id="Wam-gT-PRq">
+                                        <connections>
+                                            <action selector="saveTapped" destination="3Ke-xP-P0h" id="B4n-qF-upr"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
