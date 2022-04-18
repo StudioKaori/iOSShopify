@@ -29,6 +29,7 @@
 		438EB90B280C773D009F783F /* StampSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB90A280C773D009F783F /* StampSelectViewController.swift */; };
 		438EB90E280CB6A0009F783F /* StampBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB90D280CB6A0009F783F /* StampBaseView.swift */; };
 		438EB910280CB763009F783F /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB90F280CB763009F783F /* StampView.swift */; };
+		438EB912280D2643009F783F /* FittingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB911280D2643009F783F /* FittingRoomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		438EB90A280C773D009F783F /* StampSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampSelectViewController.swift; sourceTree = "<group>"; };
 		438EB90D280CB6A0009F783F /* StampBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampBaseView.swift; sourceTree = "<group>"; };
 		438EB90F280CB763009F783F /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = "<group>"; };
+		438EB911280D2643009F783F /* FittingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FittingRoomViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				438EB8FC280BD021009F783F /* ProductListViewController.swift */,
 				438EB8FA28093C97009F783F /* ProductDetailViewController.swift */,
 				438EB90A280C773D009F783F /* StampSelectViewController.swift */,
+				438EB911280D2643009F783F /* FittingRoomViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				438EB90E280CB6A0009F783F /* StampBaseView.swift in Sources */,
+				438EB912280D2643009F783F /* FittingRoomViewController.swift in Sources */,
 				434A739C28040BA500779518 /* ViewController.swift in Sources */,
 				438EB910280CB763009F783F /* StampView.swift in Sources */,
 				438EB8FD280BD021009F783F /* ProductListViewController.swift in Sources */,
