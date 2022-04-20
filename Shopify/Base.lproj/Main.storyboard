@@ -187,6 +187,9 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Tet-re-4Sd"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="AiF-1e-32g"/>
+                                <connections>
+                                    <outlet property="backgroundImageView" destination="6Y0-Ht-eyj" id="3tt-3v-610"/>
+                                </connections>
                             </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XGN-wi-8VJ">
                                 <rect key="frame" x="0.0" y="818" width="414" height="44"/>
