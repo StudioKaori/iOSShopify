@@ -7,9 +7,9 @@
 
 import UIKit
 
-class FittingRoomViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, StampSelectViewControllerDelegate {
+class FittingRoomViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIScrollViewDelegate, StampSelectViewControllerDelegate {
     
-    @IBOutlet var stampBaseView: StampBaseView!
+    @IBOutlet var stampBaseScrollView: StampScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class FittingRoomViewController: UIViewController, UINavigationControllerDelegat
     }
     
     @IBAction func deleteTapped(sender: UIButton) {
-        stampBaseView.deleteStamp()
+        stampBaseScrollView.deleteStamp()
     }
     
     @IBAction func saveTapped(){
@@ -77,7 +77,7 @@ class FittingRoomViewController: UIViewController, UINavigationControllerDelegat
     // This is executed when the image is picked
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            stampBaseView.setBackgroundImage(image: pickedImage)
+            stampBaseScrollView.setBackgroundImage(image: pickedImage)
         }
         
         picker.dismiss(animated: true, completion: nil)
@@ -91,7 +91,7 @@ class FittingRoomViewController: UIViewController, UINavigationControllerDelegat
         let alert = UIAlertController(title: "Save Image", message: "Would you like to save the image?", preferredStyle: .alert)
         
         let saveAction = UIAlertAction(title: "Save", style: .default) { (action: UIAlertAction!) in
-            self.stampBaseView.saveImageWithStamps()
+            self.stampBaseScrollView.saveImageWithStamps()
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action: UIAlertAction!) in
@@ -106,6 +106,6 @@ class FittingRoomViewController: UIViewController, UINavigationControllerDelegat
     
     // delegate method
     func didSelectStamp(stampImage: UIImage) {
-        stampBaseView.addStamp(stampImage: stampImage)
+        stampBaseScrollView.addStamp(stampImage: stampImage)
     }
 }
