@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol StampViewDelegate: AnyObject {
+    func didToucheStamp(stampView: StampView)
+}
+
 class StampView: UIImageView {
     
     let imageSizes: [CGFloat] = [0.7, 1.0, 1.5]
     var currentImageSizeIndex: Int = 1
+    weak var delegate: StampViewDelegate?
+    
     
     // Add double tap gesture for resizing the stamp
     // executed when it's instanciate in super view
@@ -22,6 +28,10 @@ class StampView: UIImageView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.superview?.bringSubviewToFront(self)
+        
+        // set self to the focusedStamp in FittingroomVC
+        delegate?.didToucheStamp(stampView: self)
+        
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {

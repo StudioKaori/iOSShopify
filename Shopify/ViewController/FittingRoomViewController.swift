@@ -7,14 +7,17 @@
 
 import UIKit
 
-class FittingRoomViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIScrollViewDelegate, StampSelectViewControllerDelegate {
+class FittingRoomViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIScrollViewDelegate, StampSelectViewControllerDelegate, StampViewDelegate {
     
     @IBOutlet var stampBaseScrollView: StampScrollView!
-
+    var focusedStamp: StampView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        stampBaseScrollView.delegate = self
+        stampBaseScrollView.minimumZoomScale = 1.0
+        stampBaseScrollView.maximumZoomScale = 3.0
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -106,6 +109,32 @@ class FittingRoomViewController: UIViewController, UINavigationControllerDelegat
     
     // delegate method
     func didSelectStamp(stampImage: UIImage) {
-        stampBaseScrollView.addStamp(stampImage: stampImage)
+        stampBaseScrollView.addStamp(stampImage: stampImage, fittingRoomViewController: self)
     }
+    
+    
+    func didToucheStamp(stampView: StampView) {
+        print("touched", stampView)
+        self.focusedStamp = stampView
+    }
+    
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        print("view for zooming", focusedStamp)
+        return focusedStamp
+    }
+    
+    func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
+        print("Zoom start")
+    }
+    
+    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+        print("Zoom end")
+    }
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        print("Did zoom")
+    }
+
+    
 }

@@ -5,7 +5,7 @@
 //  Created by Kaori Persson on 2022-04-17.
 //
 
-protocol StampSelectViewControllerDelegate: class {
+protocol StampSelectViewControllerDelegate: AnyObject {
     func didSelectStamp(stampImage: UIImage)
 }
 

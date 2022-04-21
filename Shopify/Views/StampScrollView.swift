@@ -11,18 +11,23 @@ class StampScrollView: UIScrollView {
 
     @IBOutlet var backgroundImageView: UIImageView!
     
+    @IBOutlet var fittingRoomViewController: FittingRoomViewController!
+    
     func setBackgroundImage(image: UIImage) {
         backgroundImageView.image = image
     }
     
-    func addStamp(stampImage: UIImage){
+    func addStamp(stampImage: UIImage, fittingRoomViewController: FittingRoomViewController){
         let size = 100
         let stampView = StampView()
         stampView.image = stampImage
         stampView.frame = CGRect(x: 0, y: 0, width: size, height: size)
         stampView.center = self.center
         stampView.isUserInteractionEnabled = true
+        stampView.delegate = fittingRoomViewController
         self.addSubview(stampView)
+        fittingRoomViewController.focusedStamp = stampView
+        
     }
     
     func deleteStamp(){
@@ -41,5 +46,6 @@ class StampScrollView: UIScrollView {
 
         
     }
+
 
 }

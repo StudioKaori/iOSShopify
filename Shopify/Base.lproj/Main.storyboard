@@ -189,6 +189,7 @@
                                 <viewLayoutGuide key="frameLayoutGuide" id="AiF-1e-32g"/>
                                 <connections>
                                     <outlet property="backgroundImageView" destination="6Y0-Ht-eyj" id="3tt-3v-610"/>
+                                    <outlet property="fittingRoomViewController" destination="3Ke-xP-P0h" id="olU-pn-j9H"/>
                                 </connections>
                             </scrollView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XGN-wi-8VJ">
