@@ -10,6 +10,7 @@ import UIKit
 class FittingRoomViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIScrollViewDelegate, StampSelectViewControllerDelegate, StampViewDelegate {
     
     @IBOutlet var stampBaseScrollView: StampScrollView!
+    @IBOutlet var backgroundImageView: UIImageView!
     var focusedStamp: StampView?
     
     override func viewDidLoad() {
@@ -80,7 +81,8 @@ class FittingRoomViewController: UIViewController, UINavigationControllerDelegat
     // This is executed when the image is picked
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-            stampBaseScrollView.setBackgroundImage(image: pickedImage)
+            //stampBaseScrollView.setBackgroundImage(image: pickedImage)
+            backgroundImageView.image = pickedImage
         }
         
         picker.dismiss(animated: true, completion: nil)

@@ -13,10 +13,6 @@ class StampScrollView: UIScrollView {
     
     @IBOutlet var fittingRoomViewController: FittingRoomViewController!
     
-    func setBackgroundImage(image: UIImage) {
-        backgroundImageView.image = image
-    }
-    
     func addStamp(stampImage: UIImage, fittingRoomViewController: FittingRoomViewController){
         let size = 100
         let stampView = StampView()
