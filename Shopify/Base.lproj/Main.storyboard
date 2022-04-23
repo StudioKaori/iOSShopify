@@ -245,9 +245,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9oS-mj-md9">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="611"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9oS-mj-md9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="778"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="J30-Fh-kdG">
                                     <size key="itemSize" width="197" height="317"/>
@@ -263,11 +262,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="197" height="317"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vMu-34-2Wu">
-                                                    <rect key="frame" x="0.0" y="0.0" width="197" height="317"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vMu-34-2Wu">
+                                                    <rect key="frame" x="10" y="10" width="177" height="297"/>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="vMu-34-2Wu" secondAttribute="bottom" constant="10" id="4Vi-OG-phS"/>
+                                                <constraint firstItem="vMu-34-2Wu" firstAttribute="top" secondItem="eQp-0r-EOT" secondAttribute="top" constant="10" id="Zwm-QR-WJC"/>
+                                                <constraint firstItem="vMu-34-2Wu" firstAttribute="leading" secondItem="eQp-0r-EOT" secondAttribute="leading" constant="10" id="kt2-dS-6S1"/>
+                                                <constraint firstAttribute="trailing" secondItem="vMu-34-2Wu" secondAttribute="trailing" constant="10" id="xpg-kK-7bH"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="197" height="317"/>
                                     </collectionViewCell>
@@ -277,9 +281,8 @@
                                     <outlet property="delegate" destination="awz-p9-MqV" id="PXC-4a-kNr"/>
                                 </connections>
                             </collectionView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vVo-I7-GSK">
-                                <rect key="frame" x="0.0" y="764" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVo-I7-GSK">
+                                <rect key="frame" x="0.0" y="778" width="414" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="WjM-X0-nIC"/>
                                     <barButtonItem title="Cancel" id="fYu-25-fAI">
@@ -293,6 +296,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="V1N-gZ-WVk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9oS-mj-md9" firstAttribute="top" secondItem="leY-L1-cvt" secondAttribute="top" id="0AA-Vy-ip8"/>
+                            <constraint firstItem="vVo-I7-GSK" firstAttribute="leading" secondItem="V1N-gZ-WVk" secondAttribute="leading" id="0bd-II-7aZ"/>
+                            <constraint firstItem="vVo-I7-GSK" firstAttribute="top" secondItem="9oS-mj-md9" secondAttribute="bottom" id="106-8L-DkG"/>
+                            <constraint firstItem="9oS-mj-md9" firstAttribute="trailing" secondItem="V1N-gZ-WVk" secondAttribute="trailing" id="Gp2-rX-AC6"/>
+                            <constraint firstItem="V1N-gZ-WVk" firstAttribute="bottom" secondItem="vVo-I7-GSK" secondAttribute="bottom" constant="20" id="VfT-nS-djO"/>
+                            <constraint firstItem="vVo-I7-GSK" firstAttribute="trailing" secondItem="V1N-gZ-WVk" secondAttribute="trailing" id="W0E-vB-52H"/>
+                            <constraint firstItem="9oS-mj-md9" firstAttribute="leading" secondItem="V1N-gZ-WVk" secondAttribute="leading" id="nF7-yL-zr5"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="stampCollectionView" destination="9oS-mj-md9" id="Hh8-mS-Bm8"/>
