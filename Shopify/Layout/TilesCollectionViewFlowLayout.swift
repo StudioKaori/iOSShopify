@@ -29,7 +29,7 @@ class TilesCollectionViewFlowLayout: UICollectionViewFlowLayout {
         let columns = CGFloat(isWide ? numberOfColumns : numberOfColumns / 2)
         let margins = collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right + sectionInset.left + sectionInset.right
         let spacings = minimumLineSpacing * (columns - 1)
-        let width = (collectionView.bounds.width - margins - spacings - 10) / columns
+        let width = (collectionView.bounds.width - margins - spacings - 5) / columns
         let height = width * heightRatio
         itemSize = CGSize(width: width, height: height)
     }
