@@ -196,6 +196,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="PZR-JR-eEG"/>
                     <connections>
+                        <outlet property="heroScrollView" destination="uMQ-jf-cgZ" id="D6a-vA-y4Z"/>
                         <outlet property="productListButton" destination="wBh-jA-2ct" id="x8V-Js-kcP"/>
                     </connections>
                 </viewController>

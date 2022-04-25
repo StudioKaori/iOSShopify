@@ -7,9 +7,21 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet var productListButton: UIButton!
+    
+    @IBOutlet weak var heroScrollView: UIScrollView! {
+        didSet {
+            heroScrollView.delegate = self
+            heroScrollView.isPagingEnabled = true
+            heroScrollView.showsHorizontalScrollIndicator = false
+            heroScrollView.showsVerticalScrollIndicator = false
+            // Fix the scroll direction
+            heroScrollView.isDirectionalLockEnabled = true
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
