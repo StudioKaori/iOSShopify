@@ -141,29 +141,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBh-jA-2ct">
-                                <rect key="frame" x="174" y="321" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="T2u-Wz-U7u"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUc-00-Pme">
-                                <rect key="frame" x="174" y="617" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <segue destination="3Ke-xP-P0h" kind="show" id="dQI-lF-8F7"/>
-                                </connections>
-                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-jf-cgZ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="793"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vgC-S3-n7L">
+                                        <rect key="frame" x="0.0" y="378" width="414" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </pageControl>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="fGH-5Y-Ee9"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="zVw-nd-t5r"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8l-nS-n3r">
+                                <rect key="frame" x="0.0" y="801" width="414" height="95"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBh-jA-2ct">
+                                        <rect key="frame" x="353" y="16" width="45" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.down" catalog="system"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="T2u-Wz-U7u"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fUc-00-Pme">
+                                        <rect key="frame" x="288" y="16" width="49" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up.on.square" catalog="system"/>
+                                        <connections>
+                                            <segue destination="3Ke-xP-P0h" kind="show" id="dQI-lF-8F7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="95" id="NwV-iO-Q4H"/>
+                                    <constraint firstItem="wBh-jA-2ct" firstAttribute="top" secondItem="Z8l-nS-n3r" secondAttribute="top" constant="16" id="laj-zO-u4n"/>
+                                    <constraint firstItem="fUc-00-Pme" firstAttribute="top" secondItem="Z8l-nS-n3r" secondAttribute="top" constant="16" id="mQe-5w-6V7"/>
+                                    <constraint firstAttribute="trailing" secondItem="wBh-jA-2ct" secondAttribute="trailing" constant="16" id="tU8-9z-fYj"/>
+                                    <constraint firstItem="wBh-jA-2ct" firstAttribute="leading" secondItem="fUc-00-Pme" secondAttribute="trailing" constant="16" id="z2K-kE-Yk6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6WH-Mv-3Cu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z8l-nS-n3r" firstAttribute="leading" secondItem="6WH-Mv-3Cu" secondAttribute="leading" id="SZe-bT-EEY"/>
+                            <constraint firstItem="Z8l-nS-n3r" firstAttribute="top" secondItem="uMQ-jf-cgZ" secondAttribute="bottom" constant="8" symbolic="YES" id="bwT-Mj-yjL"/>
+                            <constraint firstItem="Z8l-nS-n3r" firstAttribute="trailing" secondItem="6WH-Mv-3Cu" secondAttribute="trailing" id="f8a-hQ-8FA"/>
+                            <constraint firstItem="uMQ-jf-cgZ" firstAttribute="trailing" secondItem="6WH-Mv-3Cu" secondAttribute="trailing" id="juC-tW-2Oi"/>
+                            <constraint firstAttribute="bottom" secondItem="Z8l-nS-n3r" secondAttribute="bottom" id="kPI-sp-sLC"/>
+                            <constraint firstItem="uMQ-jf-cgZ" firstAttribute="top" secondItem="lBH-cK-HgL" secondAttribute="top" id="t3M-HH-RsQ"/>
+                            <constraint firstItem="uMQ-jf-cgZ" firstAttribute="leading" secondItem="6WH-Mv-3Cu" secondAttribute="leading" id="v1a-62-44a"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="oEI-Qc-8r1"/>
+                    <navigationItem key="navigationItem" id="PZR-JR-eEG"/>
                     <connections>
                         <outlet property="productListButton" destination="wBh-jA-2ct" id="x8V-Js-kcP"/>
                     </connections>
@@ -343,6 +374,8 @@
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="folder" catalog="system" width="128" height="97"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="square.and.arrow.up.on.square" catalog="system" width="117" height="128"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
