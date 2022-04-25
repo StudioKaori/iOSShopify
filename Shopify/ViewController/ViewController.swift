@@ -23,6 +23,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    @IBOutlet weak var heroPageControl: UIPageControl! {
+        didSet {
+            heroPageControl.isUserInteractionEnabled = false
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

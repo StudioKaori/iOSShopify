@@ -143,15 +143,13 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-jf-cgZ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="793"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vgC-S3-n7L">
-                                        <rect key="frame" x="0.0" y="378" width="414" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </pageControl>
-                                </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="fGH-5Y-Ee9"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="zVw-nd-t5r"/>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="vgC-S3-n7L">
+                                <rect key="frame" x="0.0" y="435" width="414" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z8l-nS-n3r">
                                 <rect key="frame" x="0.0" y="801" width="414" height="95"/>
                                 <subviews>
