@@ -30,6 +30,7 @@
 		438EB910280CB763009F783F /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB90F280CB763009F783F /* StampView.swift */; };
 		438EB912280D2643009F783F /* FittingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB911280D2643009F783F /* FittingRoomViewController.swift */; };
 		438EB914280DC530009F783F /* StampScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB913280DC530009F783F /* StampScrollView.swift */; };
+		43B155F1281E8C950050C884 /* hero1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 43B155F0281E8C950050C884 /* hero1.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		438EB90F280CB763009F783F /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = "<group>"; };
 		438EB911280D2643009F783F /* FittingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FittingRoomViewController.swift; sourceTree = "<group>"; };
 		438EB913280DC530009F783F /* StampScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampScrollView.swift; sourceTree = "<group>"; };
+		43B155F0281E8C950050C884 /* hero1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hero1.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		438EB909280C7703009F783F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				43B155F2281E8C9D0050C884 /* hero */,
 				438EB902280C76FA009F783F /* stamp1.png */,
 				438EB903280C76FA009F783F /* stamp2.png */,
 				438EB901280C76FA009F783F /* stamp3.png */,
@@ -170,6 +173,14 @@
 				438EB90F280CB763009F783F /* StampView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		43B155F2281E8C9D0050C884 /* hero */ = {
+			isa = PBXGroup;
+			children = (
+				43B155F0281E8C950050C884 /* hero1.gif */,
+			);
+			path = hero;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				438EB907280C76FA009F783F /* stamp2.png in Resources */,
+				43B155F1281E8C950050C884 /* hero1.gif in Resources */,
 				434A73A428040BA700779518 /* LaunchScreen.storyboard in Resources */,
 				434A73A128040BA700779518 /* Assets.xcassets in Resources */,
 				434A739F28040BA500779518 /* Main.storyboard in Resources */,
