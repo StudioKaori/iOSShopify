@@ -15,7 +15,7 @@
 		434A73A428040BA700779518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434A73A228040BA700779518 /* LaunchScreen.storyboard */; };
 		434B09D4281FFA780003EFC6 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 434B09D2281FFA780003EFC6 /* Montserrat-VariableFont_wght.ttf */; };
 		434B09D5281FFA780003EFC6 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 434B09D3281FFA780003EFC6 /* Montserrat-Italic-VariableFont_wght.ttf */; };
-		434B09D8281FFCAE0003EFC6 /* Hero2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 434B09D7281FFCAE0003EFC6 /* Hero2.jpg */; };
+		434B09DA28201B270003EFC6 /* Hero2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 434B09D928201B270003EFC6 /* Hero2.jpg */; };
 		4350304F280689A100191E59 /* ShopifyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350304E280689A100191E59 /* ShopifyClient.swift */; };
 		435572AA2804109D00F0924A /* apikey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 435572A92804109D00F0924A /* apikey.plist */; };
 		435572AC2804129500F0924A /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435572AB2804129500F0924A /* KeyManager.swift */; };
@@ -47,7 +47,7 @@
 		434A73A528040BA700779518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		434B09D2281FFA780003EFC6 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		434B09D3281FFA780003EFC6 /* Montserrat-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		434B09D7281FFCAE0003EFC6 /* Hero2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Hero2.jpg; sourceTree = "<group>"; };
+		434B09D928201B270003EFC6 /* Hero2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Hero2.jpg; path = ../../../../KaoriShopify/Hero2.jpg; sourceTree = "<group>"; };
 		4350304E280689A100191E59 /* ShopifyClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopifyClient.swift; sourceTree = "<group>"; };
 		435572A92804109D00F0924A /* apikey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = apikey.plist; sourceTree = "<group>"; };
 		435572AB2804129500F0924A /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 		43B155F2281E8C9D0050C884 /* hero */ = {
 			isa = PBXGroup;
 			children = (
-				434B09D7281FFCAE0003EFC6 /* Hero2.jpg */,
+				434B09D928201B270003EFC6 /* Hero2.jpg */,
 				43B155F0281E8C950050C884 /* hero1.gif */,
 			);
 			path = hero;
@@ -265,11 +265,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				434B09D8281FFCAE0003EFC6 /* Hero2.jpg in Resources */,
 				438EB907280C76FA009F783F /* stamp2.png in Resources */,
 				43B155F1281E8C950050C884 /* hero1.gif in Resources */,
 				434B09D5281FFA780003EFC6 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */,
 				434A73A428040BA700779518 /* LaunchScreen.storyboard in Resources */,
+				434B09DA28201B270003EFC6 /* Hero2.jpg in Resources */,
 				434A73A128040BA700779518 /* Assets.xcassets in Resources */,
 				434B09D4281FFA780003EFC6 /* Montserrat-VariableFont_wght.ttf in Resources */,
 				434A739F28040BA500779518 /* Main.storyboard in Resources */,
