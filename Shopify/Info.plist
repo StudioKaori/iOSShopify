@@ -2,6 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Montserrat-VariableFont_wght.ttf</string>
+		<string>Montserrat-Italic-VariableFont_wght.ttf</string>
+	</array>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>&quot;Kaori Persson&quot; Would Like to add a image to the Photo Library</string>
 	<key>NSCameraUsageDescription</key>
