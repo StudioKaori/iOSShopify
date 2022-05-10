@@ -42,6 +42,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         var nextStoryBoardId: String
     }
     
+    var heros: [Hero] = []
+    
     var hero1: Hero = Hero(
         title: "Make Up Inspiration",
         image: UIImage(named: "hero1.gif")!,
@@ -54,15 +56,18 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         title: "Virtual Fitting Room",
         image: UIImage(named: "hero2.jpg")!,
         buttonLabel: "Go Fitting Room",
-        nextViewController: ProductListViewController(),
-        nextStoryBoardId: "productListViewController"
+        nextViewController: FittingRoomViewController(),
+        nextStoryBoardId: "fittingRoomViewController"
     )
     
-    var heros: [Hero] = []
+
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        heros = [hero1, hero2]
+        
 
     }
     

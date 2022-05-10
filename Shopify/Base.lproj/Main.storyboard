@@ -220,7 +220,7 @@
         <!--Fitting Room View Controller-->
         <scene sceneID="0ud-K0-RyS">
             <objects>
-                <viewController id="3Ke-xP-P0h" customClass="FittingRoomViewController" customModule="Shopify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="fittingRoomViewController" id="3Ke-xP-P0h" customClass="FittingRoomViewController" customModule="Shopify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SsU-fN-YYt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
