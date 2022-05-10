@@ -68,7 +68,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         heros = [hero1, hero2]
         
+        setupHeros()
 
+    }
+    
+    private func setupHeros(){
+        heroScrollView.contentSize = CGSize(width: imageWidth * CGFloat(heros.count), height: scrollHight)
+        
+        for (index, hero) in heros.enumerated() {
+            print(hero)
+        }
     }
     
 
