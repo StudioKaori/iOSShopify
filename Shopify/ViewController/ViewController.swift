@@ -43,7 +43,19 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     var hero1: Hero = Hero(
-        title: "Make Up Inspiration", image: <#T##UIImage#>, buttonLabel: <#T##String#>, nextViewController: <#T##AnyObject#>, nextStoryBoardId: <#T##String#>
+        title: "Make Up Inspiration",
+        image: UIImage(named: "hero1.gif")!,
+        buttonLabel: "See products",
+        nextViewController: ProductListViewController(),
+        nextStoryBoardId: "productListViewController"
+    )
+    
+    var hero2: Hero = Hero(
+        title: "Virtual Fitting Room",
+        image: UIImage(named: "hero2.jpg")!,
+        buttonLabel: "Go Fitting Room",
+        nextViewController: ProductListViewController(),
+        nextStoryBoardId: "productListViewController"
     )
     
     var heros: [Hero] = []
