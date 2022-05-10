@@ -29,6 +29,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    private let scrollHight: CGFloat = UIScreen.main.bounds.height
+    private let imageWidth: CGFloat = UIScreen.main.bounds.width
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

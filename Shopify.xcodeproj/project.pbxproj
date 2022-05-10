@@ -15,7 +15,6 @@
 		434A73A428040BA700779518 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434A73A228040BA700779518 /* LaunchScreen.storyboard */; };
 		434B09D4281FFA780003EFC6 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 434B09D2281FFA780003EFC6 /* Montserrat-VariableFont_wght.ttf */; };
 		434B09D5281FFA780003EFC6 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 434B09D3281FFA780003EFC6 /* Montserrat-Italic-VariableFont_wght.ttf */; };
-		434B09DA28201B270003EFC6 /* Hero2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 434B09D928201B270003EFC6 /* Hero2.jpg */; };
 		4350304F280689A100191E59 /* ShopifyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4350304E280689A100191E59 /* ShopifyClient.swift */; };
 		435572AA2804109D00F0924A /* apikey.plist in Resources */ = {isa = PBXBuildFile; fileRef = 435572A92804109D00F0924A /* apikey.plist */; };
 		435572AC2804129500F0924A /* KeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435572AB2804129500F0924A /* KeyManager.swift */; };
@@ -33,6 +32,7 @@
 		438EB910280CB763009F783F /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB90F280CB763009F783F /* StampView.swift */; };
 		438EB912280D2643009F783F /* FittingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB911280D2643009F783F /* FittingRoomViewController.swift */; };
 		438EB914280DC530009F783F /* StampScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB913280DC530009F783F /* StampScrollView.swift */; };
+		43ADB4F3282A9A7A0027D3CE /* hero2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43ADB4F2282A9A7A0027D3CE /* hero2.jpg */; };
 		43B155F1281E8C950050C884 /* hero1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 43B155F0281E8C950050C884 /* hero1.gif */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +47,6 @@
 		434A73A528040BA700779518 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		434B09D2281FFA780003EFC6 /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		434B09D3281FFA780003EFC6 /* Montserrat-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		434B09D928201B270003EFC6 /* Hero2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Hero2.jpg; path = ../../../../KaoriShopify/Hero2.jpg; sourceTree = "<group>"; };
 		4350304E280689A100191E59 /* ShopifyClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopifyClient.swift; sourceTree = "<group>"; };
 		435572A92804109D00F0924A /* apikey.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = apikey.plist; sourceTree = "<group>"; };
 		435572AB2804129500F0924A /* KeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyManager.swift; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		438EB90F280CB763009F783F /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = "<group>"; };
 		438EB911280D2643009F783F /* FittingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FittingRoomViewController.swift; sourceTree = "<group>"; };
 		438EB913280DC530009F783F /* StampScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampScrollView.swift; sourceTree = "<group>"; };
+		43ADB4F2282A9A7A0027D3CE /* hero2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hero2.jpg; sourceTree = "<group>"; };
 		43B155F0281E8C950050C884 /* hero1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hero1.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,7 +194,7 @@
 		43B155F2281E8C9D0050C884 /* hero */ = {
 			isa = PBXGroup;
 			children = (
-				434B09D928201B270003EFC6 /* Hero2.jpg */,
+				43ADB4F2282A9A7A0027D3CE /* hero2.jpg */,
 				43B155F0281E8C950050C884 /* hero1.gif */,
 			);
 			path = hero;
@@ -269,7 +269,7 @@
 				43B155F1281E8C950050C884 /* hero1.gif in Resources */,
 				434B09D5281FFA780003EFC6 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */,
 				434A73A428040BA700779518 /* LaunchScreen.storyboard in Resources */,
-				434B09DA28201B270003EFC6 /* Hero2.jpg in Resources */,
+				43ADB4F3282A9A7A0027D3CE /* hero2.jpg in Resources */,
 				434A73A128040BA700779518 /* Assets.xcassets in Resources */,
 				434B09D4281FFA780003EFC6 /* Montserrat-VariableFont_wght.ttf in Resources */,
 				434A739F28040BA500779518 /* Main.storyboard in Resources */,
