@@ -29,7 +29,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    private let scrollHight: CGFloat = UIScreen.main.bounds.height
+    private let scrollHeight: CGFloat = UIScreen.main.bounds.height
     private let imageWidth: CGFloat = UIScreen.main.bounds.width
     
     
@@ -73,18 +73,18 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     }
     
     // Change hero images
-    private func setupHeros(){
-        heroScrollView.contentSize = CGSize(width: imageWidth * CGFloat(heros.count), height: scrollHight)
-        
-        for (index, hero) in heros.enumerated() {
-            print(hero)
+//    private func setupHeros(){
+//        //heroScrollView.contentSize = CGSize(width: imageWidth * CGFloat(heros.count), height: scrollHight)
+//
+//        for (index, hero) in heros.enumerated() {
+//            print(hero)
 //            let view = UIStoryboard(name: "topHeroVC", bundle: nil)
 //            var heroImageView: UIImageView = view.viewWithTag(2) as? UIImageView {
 //                heroImageView.image = heros[index].image
 //            }
-            
-        }
-    }
+//
+//        }
+//    }
     
 
 }

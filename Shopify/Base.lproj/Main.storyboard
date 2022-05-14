@@ -143,6 +143,12 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-jf-cgZ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="803"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hero2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PUX-Cl-T1r">
+                                        <rect key="frame" x="0.0" y="-88" width="414" height="813"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="fGH-5Y-Ee9"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="zVw-nd-t5r"/>
                             </scrollView>
@@ -402,6 +408,7 @@
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="folder" catalog="system" width="128" height="97"/>
+        <image name="hero2.jpg" width="390" height="844"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
         <image name="square.and.arrow.up.on.square" catalog="system" width="117" height="128"/>
