@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G25-3M-n8b">
-                                <rect key="frame" x="10" y="0.0" width="394" height="896"/>
+                                <rect key="frame" x="10" y="360" width="394" height="536"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ETI-qM-zNi">
                                     <size key="itemSize" width="202" height="262"/>
@@ -63,17 +63,36 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="jrF-Nb-x63"/>
                                 </connections>
                             </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroProducts.jpg" id="nuU-Yk-e9E">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRODUCTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9W-7i-8e9">
+                                <rect key="frame" x="0.0" y="292" width="414" height="26"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="G25-3M-n8b" secondAttribute="trailing" constant="10" id="FTi-K8-t7M"/>
-                            <constraint firstAttribute="bottom" secondItem="G25-3M-n8b" secondAttribute="bottom" id="Q1d-Up-geh"/>
-                            <constraint firstItem="G25-3M-n8b" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eq7-5h-fEH"/>
-                            <constraint firstItem="G25-3M-n8b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="nZc-AD-Xfn"/>
+                            <constraint firstItem="G25-3M-n8b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="3he-t9-PwU"/>
+                            <constraint firstItem="G25-3M-n8b" firstAttribute="top" secondItem="nuU-Yk-e9E" secondAttribute="bottom" constant="10" id="AcD-W6-qJI"/>
+                            <constraint firstItem="s9W-7i-8e9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DNs-yP-hmP"/>
+                            <constraint firstItem="nuU-Yk-e9E" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YXN-HQ-B9w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="G25-3M-n8b" secondAttribute="trailing" constant="10" id="cP7-L8-ULD"/>
+                            <constraint firstItem="nuU-Yk-e9E" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gcG-Ab-Qfh"/>
+                            <constraint firstAttribute="bottom" secondItem="G25-3M-n8b" secondAttribute="bottom" id="jRw-0Y-BOO"/>
+                            <constraint firstItem="G25-3M-n8b" firstAttribute="top" secondItem="s9W-7i-8e9" secondAttribute="bottom" constant="42" id="mcD-RP-nEV"/>
+                            <constraint firstItem="s9W-7i-8e9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rVa-b7-qgU"/>
+                            <constraint firstItem="nuU-Yk-e9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sPc-eG-LeL"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bsd-kP-knK"/>
+                    <navigationItem key="navigationItem" id="bsd-kP-knK">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="KeY-pc-n0N"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="productCollectionView" destination="G25-3M-n8b" id="0Yj-wq-hbe"/>
                         <segue destination="C94-eJ-ler" kind="show" identifier="ProductlistToDetail" id="ikd-CW-rZx"/>
@@ -98,9 +117,9 @@
                                 <rect key="frame" x="0.0" y="816" width="414" height="26"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHs-UT-p8I">
-                                <rect key="frame" x="10" y="98" width="37" height="31"/>
+                                <rect key="frame" x="10" y="98" width="69" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system">
+                                <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="Back">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -122,7 +141,9 @@
                             <constraint firstItem="btV-yF-ISf" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" id="zno-c5-0Gw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Zat-1g-7lA"/>
+                    <navigationItem key="navigationItem" id="Zat-1g-7lA">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="IVb-kX-1ht"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="XHs-UT-p8I" id="sRK-R9-xFY"/>
                         <outlet property="productImagesPageControll" destination="Zv5-7g-aAF" id="GSd-vM-3KG"/>
@@ -458,6 +479,7 @@
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="folder" catalog="system" width="128" height="97"/>
         <image name="hero2.jpg" width="390" height="844"/>
+        <image name="heroProducts.jpg" width="390" height="330"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
