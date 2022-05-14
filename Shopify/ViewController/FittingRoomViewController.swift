@@ -18,7 +18,7 @@ class FittingRoomViewController: UIViewController, UINavigationControllerDelegat
 
         stampBaseScrollView.delegate = self
         stampBaseScrollView.minimumZoomScale = 1.0
-        stampBaseScrollView.maximumZoomScale = 3.0
+        stampBaseScrollView.maximumZoomScale = 5.0
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

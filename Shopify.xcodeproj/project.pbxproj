@@ -24,10 +24,6 @@
 		438EB8F72808B392009F783F /* TilesCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB8F62808B392009F783F /* TilesCollectionViewFlowLayout.swift */; };
 		438EB8FB28093C97009F783F /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB8FA28093C97009F783F /* ProductDetailViewController.swift */; };
 		438EB8FD280BD021009F783F /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB8FC280BD021009F783F /* ProductListViewController.swift */; };
-		438EB905280C76FA009F783F /* stamp3.png in Resources */ = {isa = PBXBuildFile; fileRef = 438EB901280C76FA009F783F /* stamp3.png */; };
-		438EB906280C76FA009F783F /* stamp1.png in Resources */ = {isa = PBXBuildFile; fileRef = 438EB902280C76FA009F783F /* stamp1.png */; };
-		438EB907280C76FA009F783F /* stamp2.png in Resources */ = {isa = PBXBuildFile; fileRef = 438EB903280C76FA009F783F /* stamp2.png */; };
-		438EB908280C76FA009F783F /* stamp4.png in Resources */ = {isa = PBXBuildFile; fileRef = 438EB904280C76FA009F783F /* stamp4.png */; };
 		438EB90B280C773D009F783F /* StampSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB90A280C773D009F783F /* StampSelectViewController.swift */; };
 		438EB910280CB763009F783F /* StampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB90F280CB763009F783F /* StampView.swift */; };
 		438EB912280D2643009F783F /* FittingRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB911280D2643009F783F /* FittingRoomViewController.swift */; };
@@ -39,6 +35,7 @@
 		43C7653E282FB0F0000DCFC1 /* HeroTop2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43C7653D282FB0F0000DCFC1 /* HeroTop2.jpg */; };
 		43C76541282FB8C7000DCFC1 /* dress2.png in Resources */ = {isa = PBXBuildFile; fileRef = 43C7653F282FB8C6000DCFC1 /* dress2.png */; };
 		43C76542282FB8C7000DCFC1 /* dress1.png in Resources */ = {isa = PBXBuildFile; fileRef = 43C76540282FB8C7000DCFC1 /* dress1.png */; };
+		43C76545282FC240000DCFC1 /* heroProducts.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43C76544282FC240000DCFC1 /* heroProducts.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,10 +56,6 @@
 		438EB8F62808B392009F783F /* TilesCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		438EB8FA28093C97009F783F /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		438EB8FC280BD021009F783F /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
-		438EB901280C76FA009F783F /* stamp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp3.png; sourceTree = "<group>"; };
-		438EB902280C76FA009F783F /* stamp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp1.png; sourceTree = "<group>"; };
-		438EB903280C76FA009F783F /* stamp2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp2.png; sourceTree = "<group>"; };
-		438EB904280C76FA009F783F /* stamp4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stamp4.png; sourceTree = "<group>"; };
 		438EB90A280C773D009F783F /* StampSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampSelectViewController.swift; sourceTree = "<group>"; };
 		438EB90F280CB763009F783F /* StampView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampView.swift; sourceTree = "<group>"; };
 		438EB911280D2643009F783F /* FittingRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FittingRoomViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +67,7 @@
 		43C7653D282FB0F0000DCFC1 /* HeroTop2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HeroTop2.jpg; sourceTree = "<group>"; };
 		43C7653F282FB8C6000DCFC1 /* dress2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dress2.png; sourceTree = "<group>"; };
 		43C76540282FB8C7000DCFC1 /* dress1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dress1.png; sourceTree = "<group>"; };
+		43C76544282FC240000DCFC1 /* heroProducts.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = heroProducts.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,10 +180,6 @@
 				43C76543282FB8CF000DCFC1 /* fittingRoom */,
 				43C76538282FA54D000DCFC1 /* icons */,
 				43B155F2281E8C9D0050C884 /* hero */,
-				438EB902280C76FA009F783F /* stamp1.png */,
-				438EB903280C76FA009F783F /* stamp2.png */,
-				438EB901280C76FA009F783F /* stamp3.png */,
-				438EB904280C76FA009F783F /* stamp4.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -206,6 +196,7 @@
 		43B155F2281E8C9D0050C884 /* hero */ = {
 			isa = PBXGroup;
 			children = (
+				43C76544282FC240000DCFC1 /* heroProducts.jpg */,
 				43C7653B282FAAB3000DCFC1 /* HeroTop.jpg */,
 				43C7653D282FB0F0000DCFC1 /* HeroTop2.jpg */,
 				43ADB4F2282A9A7A0027D3CE /* hero2.jpg */,
@@ -297,7 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C76541282FB8C7000DCFC1 /* dress2.png in Resources */,
-				438EB907280C76FA009F783F /* stamp2.png in Resources */,
+				43C76545282FC240000DCFC1 /* heroProducts.jpg in Resources */,
 				43C7653E282FB0F0000DCFC1 /* HeroTop2.jpg in Resources */,
 				43B155F1281E8C950050C884 /* hero1.gif in Resources */,
 				434B09D5281FFA780003EFC6 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */,
@@ -307,11 +298,8 @@
 				434B09D4281FFA780003EFC6 /* Montserrat-VariableFont_wght.ttf in Resources */,
 				43C7653A282FA5A5000DCFC1 /* icon-dress.png in Resources */,
 				434A739F28040BA500779518 /* Main.storyboard in Resources */,
-				438EB906280C76FA009F783F /* stamp1.png in Resources */,
 				435572AA2804109D00F0924A /* apikey.plist in Resources */,
 				43C76542282FB8C7000DCFC1 /* dress1.png in Resources */,
-				438EB908280C76FA009F783F /* stamp4.png in Resources */,
-				438EB905280C76FA009F783F /* stamp3.png in Resources */,
 				43C7653C282FAAB3000DCFC1 /* HeroTop.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
