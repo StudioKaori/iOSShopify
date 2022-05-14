@@ -144,11 +144,22 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-jf-cgZ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="803"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeroTop.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PUX-Cl-T1r">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HeroTop2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PUX-Cl-T1r">
                                         <rect key="frame" x="0.0" y="-88" width="414" height="813"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KAORI PERSSON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ub-Oe-TGU">
+                                        <rect key="frame" x="0.0" y="43" width="414" height="37"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="5ub-Oe-TGU" firstAttribute="leading" secondItem="zVw-nd-t5r" secondAttribute="leading" id="48e-3q-4Zf"/>
+                                    <constraint firstItem="5ub-Oe-TGU" firstAttribute="top" secondItem="zVw-nd-t5r" secondAttribute="top" constant="131" id="Ek7-Hg-25V"/>
+                                    <constraint firstItem="5ub-Oe-TGU" firstAttribute="trailing" secondItem="zVw-nd-t5r" secondAttribute="trailing" id="NCN-UW-OeO"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="fGH-5Y-Ee9"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="zVw-nd-t5r"/>
                             </scrollView>
@@ -442,7 +453,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="HeroTop.jpg" width="390" height="844"/>
+        <image name="HeroTop2.jpg" width="390" height="844"/>
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="folder" catalog="system" width="128" height="97"/>
