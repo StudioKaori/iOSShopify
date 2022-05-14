@@ -25,8 +25,8 @@ class StampSelectViewController: UIViewController, UICollectionViewDelegateFlowL
         let tilesCollectionViewFlowLayout = TilesCollectionViewFlowLayout()
         stampCollectionView.collectionViewLayout = tilesCollectionViewFlowLayout
 
-        for i in 1...4 {
-            if let image = UIImage(named: "stamp\(i).png"){
+        for i in 1...2 {
+            if let image = UIImage(named: "dress\(i).png"){
                 stampImages.append(image)
             }
         }
