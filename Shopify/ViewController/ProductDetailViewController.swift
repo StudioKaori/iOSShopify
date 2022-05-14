@@ -13,6 +13,9 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet var backButton: UIButton!
     
+    @IBOutlet var productTitle: UILabel!
+    
+    
     @IBOutlet weak var productImagesScrollView: UIScrollView! {
         didSet {
             productImagesScrollView.delegate = self
@@ -40,6 +43,7 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         print("productDetail: ", product)
         
+        productTitle.text = product?.title
         setupImages()
     }
     
