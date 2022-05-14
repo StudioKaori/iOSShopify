@@ -226,6 +226,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="hero2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bIB-va-7L4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dck-I9-86O">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -240,16 +243,18 @@
                                     <outlet property="fittingRoomViewController" destination="3Ke-xP-P0h" id="olU-pn-j9H"/>
                                 </connections>
                             </scrollView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XGN-wi-8VJ">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XGN-wi-8VJ">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
                                     <barButtonItem title="Item" image="camera" catalog="system" id="xHM-B2-9hX">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="cameraTappedWithSender:" destination="3Ke-xP-P0h" id="uvW-no-LsC"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ghS-ez-nXn"/>
                                     <barButtonItem title="Item" image="plus" catalog="system" id="OSf-DY-T3w">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="stampTappedWithSender:" destination="3Ke-xP-P0h" id="J1P-UO-5Fb"/>
                                             <segue destination="awz-p9-MqV" kind="presentation" identifier="FittingRoomToStamp" id="aA0-16-8pY"/>
@@ -257,12 +262,14 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Rg6-c0-CDE"/>
                                     <barButtonItem title="Item" image="trash" catalog="system" id="dbZ-ZS-eHL">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="deleteTappedWithSender:" destination="3Ke-xP-P0h" id="Oj8-Tb-Jsf"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="0ql-Xw-Q4x"/>
                                     <barButtonItem title="Item" image="folder" catalog="system" id="Wam-gT-PRq">
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <action selector="saveTapped" destination="3Ke-xP-P0h" id="B4n-qF-upr"/>
                                         </connections>
@@ -274,7 +281,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="XGN-wi-8VJ" firstAttribute="trailing" secondItem="CJn-LV-47o" secondAttribute="trailing" id="0pl-e4-8BP"/>
+                            <constraint firstItem="bIB-va-7L4" firstAttribute="leading" secondItem="CJn-LV-47o" secondAttribute="leading" id="1Dr-7P-5jl"/>
+                            <constraint firstItem="XGN-wi-8VJ" firstAttribute="top" secondItem="bIB-va-7L4" secondAttribute="bottom" id="JKn-Oc-Ey0"/>
+                            <constraint firstItem="bIB-va-7L4" firstAttribute="trailing" secondItem="CJn-LV-47o" secondAttribute="trailing" id="T0w-cD-fNq"/>
                             <constraint firstItem="XGN-wi-8VJ" firstAttribute="leading" secondItem="CJn-LV-47o" secondAttribute="leading" id="b0k-O8-vw8"/>
+                            <constraint firstItem="bIB-va-7L4" firstAttribute="top" secondItem="CJn-LV-47o" secondAttribute="top" id="i1O-CM-NSi"/>
                             <constraint firstItem="XGN-wi-8VJ" firstAttribute="bottom" secondItem="CJn-LV-47o" secondAttribute="bottom" id="obd-AV-cD8"/>
                         </constraints>
                     </view>
@@ -417,6 +428,7 @@
         <image name="camera" catalog="system" width="128" height="94"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="folder" catalog="system" width="128" height="97"/>
+        <image name="hero2.jpg" width="390" height="844"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
