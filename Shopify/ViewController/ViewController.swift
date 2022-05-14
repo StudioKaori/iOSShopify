@@ -68,16 +68,21 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         heros = [hero1, hero2]
         
-        setupHeros()
+        //setupHeros()
 
     }
     
+    // Change hero images
     private func setupHeros(){
         heroScrollView.contentSize = CGSize(width: imageWidth * CGFloat(heros.count), height: scrollHight)
         
         for (index, hero) in heros.enumerated() {
             print(hero)
-            let view =　UIView()
+//            let view = UIStoryboard(name: "topHeroVC", bundle: nil)
+//            var heroImageView: UIImageView = view.viewWithTag(2) as? UIImageView {
+//                heroImageView.image = heros[index].image
+//            }
+            
         }
     }
     

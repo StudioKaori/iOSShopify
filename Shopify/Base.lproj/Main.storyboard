@@ -277,11 +277,15 @@
         <!--View Controller-->
         <scene sceneID="XDl-MS-uff">
             <objects>
-                <viewController storyboardIdentifier="topHero" id="Qlc-JT-q9P" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="topHeroVC" id="Qlc-JT-q9P" sceneMemberID="viewController">
                     <view key="view" tag="1" contentMode="scaleToFill" id="Udo-NJ-ceW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kga-Tc-WTr">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TS4-uV-H1o">
                                 <rect key="frame" x="0.0" y="168" width="414" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
