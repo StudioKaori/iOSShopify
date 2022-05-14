@@ -39,15 +39,15 @@
                                                     <rect key="frame" x="0.0" y="8" width="202" height="167"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzw-md-7Ii">
-                                                    <rect key="frame" x="0.0" y="183" width="202" height="37"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-vt-l8t">
+                                                    <rect key="frame" x="14" y="217" width="188" height="37"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-vt-l8t">
-                                                    <rect key="frame" x="0.0" y="217" width="202" height="37"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzw-md-7Ii">
+                                                    <rect key="frame" x="14" y="183" width="194" height="37"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                     <nil key="textColor"/>
@@ -117,7 +117,7 @@
                                 <rect key="frame" x="0.0" y="816" width="414" height="26"/>
                             </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRA-uM-6VX">
-                                <rect key="frame" x="27" y="706" width="359" height="31"/>
+                                <rect key="frame" x="27" y="701" width="359" height="31"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -132,21 +132,40 @@
                                     <action selector="backToPreviousPage" destination="C94-eJ-ler" eventType="touchUpInside" id="jy9-so-xzn"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOY-gR-Glu">
+                                <rect key="frame" x="28" y="735" width="366" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product desc" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaX-SH-ckk">
+                                <rect key="frame" x="27" y="780" width="366" height="21"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WPT-PE-MT5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Zv5-7g-aAF" firstAttribute="top" secondItem="PRA-uM-6VX" secondAttribute="bottom" constant="79" id="1AC-5Y-tyd"/>
+                            <constraint firstItem="zOY-gR-Glu" firstAttribute="top" secondItem="PRA-uM-6VX" secondAttribute="bottom" constant="5" id="1AC-5Y-tyd"/>
                             <constraint firstItem="WPT-PE-MT5" firstAttribute="bottom" secondItem="Zv5-7g-aAF" secondAttribute="bottom" constant="20" id="4Jh-SE-SIx"/>
+                            <constraint firstItem="zOY-gR-Glu" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" constant="28" id="4o5-qJ-Qic"/>
+                            <constraint firstItem="WPT-PE-MT5" firstAttribute="trailing" secondItem="DaX-SH-ckk" secondAttribute="trailing" constant="21" id="6rv-6O-cxo"/>
                             <constraint firstItem="btV-yF-ISf" firstAttribute="top" secondItem="y8r-L1-l9B" secondAttribute="top" id="Gz7-mA-6v8"/>
+                            <constraint firstItem="zOY-gR-Glu" firstAttribute="top" secondItem="PRA-uM-6VX" secondAttribute="bottom" constant="3" id="I7W-oq-7F8"/>
                             <constraint firstItem="XHs-UT-p8I" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" constant="10" id="Mg4-Wr-Dbf"/>
                             <constraint firstItem="Zv5-7g-aAF" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" id="R92-xp-Tzb"/>
+                            <constraint firstItem="DaX-SH-ckk" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" constant="27" id="Swl-My-iA8"/>
+                            <constraint firstItem="WPT-PE-MT5" firstAttribute="trailing" secondItem="zOY-gR-Glu" secondAttribute="trailing" constant="20" id="Ybk-ND-YEu"/>
                             <constraint firstItem="btV-yF-ISf" firstAttribute="trailing" secondItem="WPT-PE-MT5" secondAttribute="trailing" id="Ysk-ry-O7r"/>
+                            <constraint firstItem="Zv5-7g-aAF" firstAttribute="top" secondItem="DaX-SH-ckk" secondAttribute="bottom" constant="15" id="aKA-at-FfM"/>
                             <constraint firstItem="PRA-uM-6VX" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" constant="27" id="b77-NW-tKG"/>
                             <constraint firstItem="WPT-PE-MT5" firstAttribute="trailing" secondItem="Zv5-7g-aAF" secondAttribute="trailing" id="dNv-Wd-1uE"/>
                             <constraint firstItem="WPT-PE-MT5" firstAttribute="trailing" secondItem="PRA-uM-6VX" secondAttribute="trailing" constant="28" id="fba-zo-h1D"/>
                             <constraint firstAttribute="bottom" secondItem="btV-yF-ISf" secondAttribute="bottom" id="haG-0W-4p3"/>
                             <constraint firstItem="XHs-UT-p8I" firstAttribute="top" secondItem="WPT-PE-MT5" secondAttribute="top" constant="10" id="lci-3X-aRu"/>
+                            <constraint firstItem="DaX-SH-ckk" firstAttribute="top" secondItem="zOY-gR-Glu" secondAttribute="bottom" constant="24" id="o1v-QO-7Ov"/>
                             <constraint firstItem="btV-yF-ISf" firstAttribute="leading" secondItem="WPT-PE-MT5" secondAttribute="leading" id="zno-c5-0Gw"/>
                         </constraints>
                     </view>
@@ -155,8 +174,10 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="XHs-UT-p8I" id="sRK-R9-xFY"/>
+                        <outlet property="productDesc" destination="DaX-SH-ckk" id="VRj-Lh-fdM"/>
                         <outlet property="productImagesPageControll" destination="Zv5-7g-aAF" id="GSd-vM-3KG"/>
                         <outlet property="productImagesScrollView" destination="btV-yF-ISf" id="KEF-sz-68X"/>
+                        <outlet property="productPrice" destination="zOY-gR-Glu" id="ces-Wv-lsp"/>
                         <outlet property="productTitle" destination="PRA-uM-6VX" id="XeF-yo-Ey7"/>
                     </connections>
                 </viewController>

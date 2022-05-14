@@ -14,6 +14,8 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet var backButton: UIButton!
     
     @IBOutlet var productTitle: UILabel!
+    @IBOutlet var productPrice: UILabel!
+    @IBOutlet var productDesc: UILabel!
     
     
     @IBOutlet weak var productImagesScrollView: UIScrollView! {
@@ -44,6 +46,8 @@ class ProductDetailViewController: UIViewController, UIScrollViewDelegate {
         print("productDetail: ", product)
         
         productTitle.text = product?.title
+        productPrice.text =  "$ \(product!.price)"
+        productDesc.text = product?.description
         setupImages()
     }
     
