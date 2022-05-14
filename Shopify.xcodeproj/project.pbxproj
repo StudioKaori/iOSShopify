@@ -34,6 +34,7 @@
 		438EB914280DC530009F783F /* StampScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438EB913280DC530009F783F /* StampScrollView.swift */; };
 		43ADB4F3282A9A7A0027D3CE /* hero2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 43ADB4F2282A9A7A0027D3CE /* hero2.jpg */; };
 		43B155F1281E8C950050C884 /* hero1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 43B155F0281E8C950050C884 /* hero1.gif */; };
+		43C7653A282FA5A5000DCFC1 /* icon-dress.png in Resources */ = {isa = PBXBuildFile; fileRef = 43C76539282FA5A5000DCFC1 /* icon-dress.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		438EB913280DC530009F783F /* StampScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampScrollView.swift; sourceTree = "<group>"; };
 		43ADB4F2282A9A7A0027D3CE /* hero2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hero2.jpg; sourceTree = "<group>"; };
 		43B155F0281E8C950050C884 /* hero1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = hero1.gif; sourceTree = "<group>"; };
+		43C76539282FA5A5000DCFC1 /* icon-dress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dress.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		438EB909280C7703009F783F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				43C76538282FA54D000DCFC1 /* icons */,
 				43B155F2281E8C9D0050C884 /* hero */,
 				438EB902280C76FA009F783F /* stamp1.png */,
 				438EB903280C76FA009F783F /* stamp2.png */,
@@ -198,6 +201,14 @@
 				43B155F0281E8C950050C884 /* hero1.gif */,
 			);
 			path = hero;
+			sourceTree = "<group>";
+		};
+		43C76538282FA54D000DCFC1 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				43C76539282FA5A5000DCFC1 /* icon-dress.png */,
+			);
+			path = icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +283,7 @@
 				43ADB4F3282A9A7A0027D3CE /* hero2.jpg in Resources */,
 				434A73A128040BA700779518 /* Assets.xcassets in Resources */,
 				434B09D4281FFA780003EFC6 /* Montserrat-VariableFont_wght.ttf in Resources */,
+				43C7653A282FA5A5000DCFC1 /* icon-dress.png in Resources */,
 				434A739F28040BA500779518 /* Main.storyboard in Resources */,
 				438EB906280C76FA009F783F /* stamp1.png in Resources */,
 				435572AA2804109D00F0924A /* apikey.plist in Resources */,

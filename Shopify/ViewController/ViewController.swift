@@ -68,6 +68,10 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         heros = [hero1, hero2]
         
+        productListButton.imageView?.contentMode = .scaleAspectFill
+        productListButton.contentHorizontalAlignment = .fill
+        productListButton.contentVerticalAlignment = .fill
+        
         //setupHeros()
 
     }
