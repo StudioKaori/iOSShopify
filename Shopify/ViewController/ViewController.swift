@@ -77,6 +77,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         for (index, hero) in heros.enumerated() {
             print(hero)
+            let view =　UIView()
         }
     }
     

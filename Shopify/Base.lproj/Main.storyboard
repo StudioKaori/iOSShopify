@@ -143,19 +143,6 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uMQ-jf-cgZ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="803"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kc5-B0-p5h">
-                                        <rect key="frame" x="0.0" y="89" width="414" height="29"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="kc5-B0-p5h" firstAttribute="trailing" secondItem="zVw-nd-t5r" secondAttribute="trailing" id="GZL-ah-g07"/>
-                                    <constraint firstItem="kc5-B0-p5h" firstAttribute="leading" secondItem="zVw-nd-t5r" secondAttribute="leading" id="WWW-Ya-PJc"/>
-                                    <constraint firstItem="kc5-B0-p5h" firstAttribute="top" secondItem="zVw-nd-t5r" secondAttribute="top" constant="177" id="pZs-Wa-Jz7"/>
-                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="fGH-5Y-Ee9"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="zVw-nd-t5r"/>
                             </scrollView>
@@ -286,6 +273,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DvG-WO-ZRX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1005.7971014492755" y="856.47321428571422"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XDl-MS-uff">
+            <objects>
+                <viewController storyboardIdentifier="topHero" id="Qlc-JT-q9P" sceneMemberID="viewController">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="Udo-NJ-ceW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TS4-uV-H1o">
+                                <rect key="frame" x="0.0" y="168" width="414" height="127"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="K1t-Az-LFi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5Z-aL-fHH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1008.6956521739131" y="1552.9017857142856"/>
         </scene>
         <!--Stamp Select View Controller-->
         <scene sceneID="ZSW-Sf-Rxu">
