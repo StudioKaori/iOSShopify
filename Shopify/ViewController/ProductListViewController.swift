@@ -14,12 +14,21 @@ class ProductListViewController: UIViewController, UICollectionViewDelegateFlowL
     
     var products: [Product] = []
     
+    var activityIndicatorView = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         let tilesCollectionViewFlowLayout = TilesCollectionViewFlowLayout()
         productCollectionView.collectionViewLayout = tilesCollectionViewFlowLayout
+        
+        // activityIndicator
+        activityIndicatorView.center = view.center
+        activityIndicatorView.style = .large
+        activityIndicatorView.color = .black
+        view.addSubview(activityIndicatorView)
+        activityIndicatorView.startAnimating()
         
     }
     
@@ -35,6 +44,9 @@ class ProductListViewController: UIViewController, UICollectionViewDelegateFlowL
             DispatchQueue.main.async {
                 self.productCollectionView.reloadData()
             }
+            
+            // Stop activityIndicatorView
+            self.activityIndicatorView.stopAnimating()
             
         }
         
