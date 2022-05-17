@@ -225,12 +225,12 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wQR-30-GRc"/>
                                     <barButtonItem style="plain" id="juZ-Rz-xmZ">
                                         <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wBh-jA-2ct">
-                                            <rect key="frame" x="52.5" y="5" width="84" height="44"/>
+                                            <rect key="frame" x="44.5" y="15" width="108" height="24"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="PRODUCTS">
+                                            <state key="normal" title="PRODUCTS" image="icon-lipstick.png">
                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
                                             <connections>
@@ -241,7 +241,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="EJy-jk-s4c"/>
                                     <barButtonItem title="FITTING ROOM" image="icon-dress.png" landscapeImage="icon-dress.png" style="plain" id="qJH-wj-y2w">
                                         <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="fUc-00-Pme">
-                                            <rect key="frame" x="188.5" y="5" width="173" height="44"/>
+                                            <rect key="frame" x="196.5" y="5" width="173" height="44"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -511,7 +511,8 @@
         <image name="folder" catalog="system" width="128" height="97"/>
         <image name="hero2.jpg" width="390" height="844"/>
         <image name="heroProducts.jpg" width="390" height="330"/>
-        <image name="icon-dress.png" width="36" height="36"/>
+        <image name="icon-dress.png" width="24" height="24"/>
+        <image name="icon-lipstick.png" width="24" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
