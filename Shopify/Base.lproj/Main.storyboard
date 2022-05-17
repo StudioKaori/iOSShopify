@@ -225,7 +225,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wQR-30-GRc"/>
                                     <barButtonItem style="plain" id="juZ-Rz-xmZ">
                                         <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wBh-jA-2ct">
-                                            <rect key="frame" x="86" y="5" width="84" height="44"/>
+                                            <rect key="frame" x="52.5" y="5" width="84" height="44"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -241,11 +241,14 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="EJy-jk-s4c"/>
                                     <barButtonItem title="FITTING ROOM" image="icon-dress.png" landscapeImage="icon-dress.png" style="plain" id="qJH-wj-y2w">
                                         <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="fUc-00-Pme">
-                                            <rect key="frame" x="256" y="5" width="72" height="44"/>
+                                            <rect key="frame" x="188.5" y="5" width="173" height="44"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" image="icon-dress.png"/>
+                                            <state key="normal" title="FITTING ROOM" image="icon-dress.png">
+                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
                                             <connections>
                                                 <segue destination="3Ke-xP-P0h" kind="show" id="dQI-lF-8F7"/>
                                             </connections>
