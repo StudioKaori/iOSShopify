@@ -40,24 +40,24 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-vt-l8t">
-                                                    <rect key="frame" x="14" y="238" width="36" height="21"/>
+                                                    <rect key="frame" x="0.0" y="238" width="36" height="21"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzw-md-7Ii">
-                                                    <rect key="frame" x="14" y="212" width="30" height="21"/>
+                                                    <rect key="frame" x="0.0" y="212" width="30" height="21"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Fzw-md-7Ii" firstAttribute="leading" secondItem="D3X-Aq-Rn6" secondAttribute="leading" constant="14" id="3bE-57-sHS"/>
+                                                <constraint firstItem="Fzw-md-7Ii" firstAttribute="leading" secondItem="D3X-Aq-Rn6" secondAttribute="leading" id="3bE-57-sHS"/>
                                                 <constraint firstItem="4nb-4d-rJW" firstAttribute="leading" secondItem="D3X-Aq-Rn6" secondAttribute="leading" id="7d5-sk-Xeg"/>
                                                 <constraint firstItem="dhE-vt-l8t" firstAttribute="top" secondItem="4nb-4d-rJW" secondAttribute="bottom" constant="34" id="AAu-ky-M4a"/>
                                                 <constraint firstItem="Fzw-md-7Ii" firstAttribute="top" secondItem="4nb-4d-rJW" secondAttribute="bottom" constant="8" symbolic="YES" id="EG3-xl-vzr"/>
-                                                <constraint firstItem="dhE-vt-l8t" firstAttribute="leading" secondItem="D3X-Aq-Rn6" secondAttribute="leading" constant="14" id="SXB-qR-zXy"/>
+                                                <constraint firstItem="dhE-vt-l8t" firstAttribute="leading" secondItem="D3X-Aq-Rn6" secondAttribute="leading" id="SXB-qR-zXy"/>
                                                 <constraint firstItem="4nb-4d-rJW" firstAttribute="top" secondItem="D3X-Aq-Rn6" secondAttribute="top" constant="8" id="xIC-L4-WB7"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -231,7 +231,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wQR-30-GRc"/>
                                     <barButtonItem style="plain" id="juZ-Rz-xmZ">
                                         <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wBh-jA-2ct">
-                                            <rect key="frame" x="44.5" y="15" width="108" height="24"/>
+                                            <rect key="frame" x="45" y="15" width="108" height="24"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -247,7 +247,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="EJy-jk-s4c"/>
                                     <barButtonItem title="FITTING ROOM" image="icon-dress.png" landscapeImage="icon-dress.png" style="plain" id="qJH-wj-y2w">
                                         <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="fUc-00-Pme">
-                                            <rect key="frame" x="196.5" y="5" width="173" height="44"/>
+                                            <rect key="frame" x="197" y="5" width="173" height="44"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
