@@ -86,6 +86,10 @@ class ProductListViewController: UIViewController, UICollectionViewDelegateFlowL
             productTitle.text = products[indexPath.row].title
         }
         
+        if let productPrice = cell.viewWithTag(3) as? UILabel {
+            productPrice.text = "$ \(products[indexPath.row].price)"
+        }
+        
         return cell
     }
 
