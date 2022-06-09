@@ -10,7 +10,7 @@ import Buy
 import RxSwift
 import RxCocoa
 
-class ProductListViewController: UIViewController { //UICollectionViewDelegateFlowLayout, //UICollectionViewDataSource {
+class ProductListViewController: UIViewController {
     // MARK: - Properties
     
     @IBOutlet var productCollectionView: UICollectionView!
@@ -18,7 +18,7 @@ class ProductListViewController: UIViewController { //UICollectionViewDelegateFl
     var products: [Product] = []
     
     var activityIndicatorView: UIActivityIndicatorView = {
-       let indicator = UIActivityIndicatorView()
+        let indicator = UIActivityIndicatorView()
         indicator.style = .large
         indicator.color = .black
         return indicator
@@ -49,7 +49,7 @@ class ProductListViewController: UIViewController { //UICollectionViewDelegateFl
         
         // show navigationbar
         self.navigationController!.setNavigationBarHidden(false, animated: false)
-
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -70,11 +70,11 @@ class ProductListViewController: UIViewController { //UICollectionViewDelegateFl
             if let productTitle = cell.viewWithTag(2) as? UILabel {
                 productTitle.text = productModel.title
             }
-
+            
             if let productImage = cell.viewWithTag(1) as? UIImageView {
                 productImage.image = productModel.images[0]
             }
-
+            
             if let productPrice = cell.viewWithTag(3) as? UILabel {
                 productPrice.text = "$ \(productModel.price)"
             }
@@ -91,37 +91,5 @@ class ProductListViewController: UIViewController { //UICollectionViewDelegateFl
         })
     }
     
-    // MARK: -  collection view delegate methods
-    // return numbers of images to generate the cells
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return self.products.count
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "ProductlistToDetail", sender: products[indexPath.row])
-//    }
-//
-//    // set contents to each cell
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//
-//        // get a cell object
-//        let cell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath)
-//
-//        // tag is set in storyboard
-//        if let productImage = cell.viewWithTag(1) as? UIImageView {
-//            productImage.image = products[indexPath.row].images[0]
-//        }
-//
-//        if let productTitle = cell.viewWithTag(2) as? UILabel {
-//            productTitle.text = products[indexPath.row].title
-//        }
-//
-//        if let productPrice = cell.viewWithTag(3) as? UILabel {
-//            productPrice.text = "$ \(products[indexPath.row].price)"
-//        }
-//
-//        return cell
-//    }
-
 }
 
