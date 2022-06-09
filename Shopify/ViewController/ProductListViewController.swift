@@ -7,6 +7,8 @@
 
 import UIKit
 import Buy
+import RxSwift
+import RxCocoa
 
 class ProductListViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     // MARK: - Properties
