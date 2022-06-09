@@ -9,6 +9,7 @@ import UIKit
 import Buy
 
 class ProductListViewController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    // MARK: - Properties
     
     @IBOutlet var productCollectionView: UICollectionView!
     
@@ -61,7 +62,7 @@ class ProductListViewController: UIViewController, UICollectionViewDelegateFlowL
         }
     }
     
-    // collection view delegate methods
+    // MARK: -  collection view delegate methods
     // return numbers of images to generate the cells
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.products.count
