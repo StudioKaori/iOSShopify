@@ -46,20 +46,6 @@ class ProductListViewController: UIViewController { //UICollectionViewDelegateFl
     // viewWillAppear will notify before the view is about to be added to hierarchy
     override func viewWillAppear(_ animated: Bool) {
         //ShopifyClient.getShopInfo()
-
-//        ShopifyClient.getProducts(numbersOfProducts: 25) { (result) in
-//            //print("result: ", result)
-//            self.products = result
-//
-//            // UI change should be executed in the main thread
-//            DispatchQueue.main.async {
-//                self.productCollectionView.reloadData()
-//            }
-//
-//            // Stop activityIndicatorView
-//            self.activityIndicatorView.stopAnimating()
-//
-//        }
         
         // show navigationbar
         self.navigationController!.setNavigationBarHidden(false, animated: false)
@@ -83,6 +69,14 @@ class ProductListViewController: UIViewController { //UICollectionViewDelegateFl
         ) { row, productModel, cell in
             if let productTitle = cell.viewWithTag(2) as? UILabel {
                 productTitle.text = productModel.title
+            }
+
+            if let productImage = cell.viewWithTag(1) as? UIImageView {
+                productImage.image = productModel.images[0]
+            }
+
+            if let productPrice = cell.viewWithTag(3) as? UILabel {
+                productPrice.text = "$ \(productModel.price)"
             }
         }.disposed(by: disposeBag)
         
