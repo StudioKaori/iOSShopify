@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "mobile-buy-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/StudioKaori/mobile-buy-sdk-ios",
+      "state" : {
+        "revision" : "62d2bc07c16521875d0b267171b46fd927ab552e",
+        "version" : "7.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}
