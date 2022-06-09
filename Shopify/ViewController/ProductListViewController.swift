@@ -17,7 +17,12 @@ class ProductListViewController: UIViewController { //UICollectionViewDelegateFl
     
     var products: [Product] = []
     
-    var activityIndicatorView = UIActivityIndicatorView()
+    var activityIndicatorView: UIActivityIndicatorView = {
+       let indicator = UIActivityIndicatorView()
+        indicator.style = .large
+        indicator.color = .black
+        return indicator
+    }()
     
     // for RxSwift
     private var disposeBag = DisposeBag()
@@ -31,8 +36,6 @@ class ProductListViewController: UIViewController { //UICollectionViewDelegateFl
         
         // activityIndicator
         activityIndicatorView.center = view.center
-        activityIndicatorView.style = .large
-        activityIndicatorView.color = .black
         view.addSubview(activityIndicatorView)
         activityIndicatorView.startAnimating()
         
