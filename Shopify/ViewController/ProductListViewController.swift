@@ -10,15 +10,13 @@ import Buy
 import RxSwift
 import RxCocoa
 
-class ProductListViewController: UIViewController {
+class ProductListViewController: UIViewController { //UICollectionViewDelegateFlowLayout, //UICollectionViewDataSource {
     // MARK: - Properties
     
     @IBOutlet var productCollectionView: UICollectionView!
     
-    var products: [Product] = []
-    
     var activityIndicatorView: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView()
+       let indicator = UIActivityIndicatorView()
         indicator.style = .large
         indicator.color = .black
         return indicator
@@ -26,6 +24,7 @@ class ProductListViewController: UIViewController {
     
     // for RxSwift
     private var disposeBag = DisposeBag()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +48,7 @@ class ProductListViewController: UIViewController {
         
         // show navigationbar
         self.navigationController!.setNavigationBarHidden(false, animated: false)
-        
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -70,19 +69,19 @@ class ProductListViewController: UIViewController {
             if let productTitle = cell.viewWithTag(2) as? UILabel {
                 productTitle.text = productModel.title
             }
-            
+
             if let productImage = cell.viewWithTag(1) as? UIImageView {
                 productImage.image = productModel.images[0]
             }
-            
+
             if let productPrice = cell.viewWithTag(3) as? UILabel {
                 productPrice.text = "$ \(productModel.price)"
             }
         }.disposed(by: disposeBag)
         
         // bind a model selected handler, when it's clicked
-        productCollectionView.rx.modelSelected(Product.self).bind { product in
-            print("bind : \(product.title)")
+        productCollectionView.rx.modelSelected(Product.self).bind { [weak self] product in
+            self?.performSegue(withIdentifier: "ProductlistToDetail", sender: product)
         }.disposed(by: disposeBag)
         
         // Fetch items
@@ -90,6 +89,6 @@ class ProductListViewController: UIViewController {
             self?.activityIndicatorView.stopAnimating()
         })
     }
-    
+
 }
 

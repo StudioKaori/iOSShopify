@@ -116,7 +116,7 @@ class ShopifyClient: NSObject {
                 products.append(product)
                 
             }
-            print("products: \(products)")
+
             self.items.onNext(products)
             // Shouldn't call completed, cannot call onNext afterwords!
             //self.items.onCompleted()
