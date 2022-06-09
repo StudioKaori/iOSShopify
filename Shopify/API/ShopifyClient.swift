@@ -125,7 +125,7 @@ class ShopifyClient: NSObject {
         // End of products information
     }
     
-    public func fetchProducts(numbersOfProducts: Int32){
+    public func fetchProducts(numbersOfProducts: Int32, completion: @escaping (Bool) -> Void){
         
         var products: [Product] = []
         // products information
@@ -188,6 +188,7 @@ class ShopifyClient: NSObject {
             }
             self.items.onNext(products)
             self.items.onCompleted()
+            completion(true)
             
         }
         productsTask.resume()

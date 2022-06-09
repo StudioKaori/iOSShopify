@@ -92,7 +92,9 @@ class ProductListViewController: UIViewController { //UICollectionViewDelegateFl
         }.disposed(by: disposeBag)
         
         // Fetch items
-        ShopifyClient.shared.fetchProducts(numbersOfProducts: 25)
+        ShopifyClient.shared.fetchProducts(numbersOfProducts: 25, completion: { [weak self] _ in
+            self?.activityIndicatorView.stopAnimating()
+        })
     }
     
     // MARK: -  collection view delegate methods
