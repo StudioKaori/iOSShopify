@@ -12,6 +12,7 @@ import RxCocoa
 
 class ShopifyClient: NSObject {
     
+    // MARK: - Properties
     // Make the class singleton
     static let shared = ShopifyClient()
     
@@ -21,15 +22,11 @@ class ShopifyClient: NSObject {
         apiKey:     KeyManager().getValue(key: "apiKey") as! String
     )
     
-    //    static func getShopInfo(completion: @escaping(productsResult)->Void) {
-    //
-    //    }
-    
     let items = PublishSubject<[Product]>()
     
+    // MARK: - Methods
     static func getShopInfo() {
-        //static func getShopInfo(completion: @escaping(ShopInfoResult)->Void) {
-        // Shop information
+
         let query = Storefront.buildQuery { $0
             .shop { $0
                 .name()
@@ -44,7 +41,7 @@ class ShopifyClient: NSObject {
         let task = client.queryGraphWith(query) { response, error in
             
             guard let data = response else {
-                print("Json data error in getShopInfo")
+                print(" Data error in getShopInfo")
                 return
             }
             
@@ -130,6 +127,8 @@ class ShopifyClient: NSObject {
     } //: fetchProductInformation
     
 }
+
+// MARK: - Models Product, ShopInfo
 
 struct ShopInfo {
     var name: String
