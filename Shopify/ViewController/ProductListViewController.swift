@@ -10,7 +10,7 @@ import Buy
 import RxSwift
 import RxCocoa
 
-class ProductListViewController: UIViewController { //UICollectionViewDelegateFlowLayout, //UICollectionViewDataSource {
+class ProductListViewController: UIViewController { 
     // MARK: - Properties
     
     @IBOutlet var productCollectionView: UICollectionView!
