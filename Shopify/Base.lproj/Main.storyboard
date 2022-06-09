@@ -64,10 +64,6 @@
                                         <size key="customSize" width="202" height="262"/>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="0dN-Ez-izv"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jrF-Nb-x63"/>
-                                </connections>
                             </collectionView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heroProducts.jpg" id="nuU-Yk-e9E">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="350"/>
@@ -231,7 +227,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="wQR-30-GRc"/>
                                     <barButtonItem style="plain" id="juZ-Rz-xmZ">
                                         <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wBh-jA-2ct">
-                                            <rect key="frame" x="45" y="15" width="108" height="24"/>
+                                            <rect key="frame" x="44.5" y="15" width="108" height="24"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -247,7 +243,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="EJy-jk-s4c"/>
                                     <barButtonItem title="FITTING ROOM" image="icon-dress.png" landscapeImage="icon-dress.png" style="plain" id="qJH-wj-y2w">
                                         <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" id="fUc-00-Pme">
-                                            <rect key="frame" x="197" y="5" width="173" height="44"/>
+                                            <rect key="frame" x="196.5" y="5" width="173" height="44"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

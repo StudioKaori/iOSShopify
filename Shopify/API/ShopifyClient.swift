@@ -12,15 +12,20 @@ import RxCocoa
 
 class ShopifyClient: NSObject {
     
+    // Make the class singleton
+    static let shared = ShopifyClient()
+    
     // Shopify storefront API doc: See 'Query' https://shopify.dev/api/storefront/2022-04/objects/Shop#fields
     static let client = Graph.Client(
         shopDomain: KeyManager().getValue(key: "shopDomain") as! String,
         apiKey:     KeyManager().getValue(key: "apiKey") as! String
     )
     
-//    static func getShopInfo(completion: @escaping(productsResult)->Void) {
-//
-//    }
+    //    static func getShopInfo(completion: @escaping(productsResult)->Void) {
+    //
+    //    }
+    
+    let items = PublishSubject<[Product]>()
     
     static func getShopInfo() {
         //static func getShopInfo(completion: @escaping(ShopInfoResult)->Void) {
@@ -35,7 +40,7 @@ class ShopifyClient: NSObject {
                 }
             }
         }
-
+        
         let task = client.queryGraphWith(query) { response, error in
             
             guard let data = response else {
@@ -48,148 +53,146 @@ class ShopifyClient: NSObject {
             print("Shop info graphQL: ", data)
             print("Shop info: ", shopInfo)
             
-
+            
         }
         task.resume()
     }
     
     static func getProducts(numbersOfProducts: Int32, completion: @escaping(Array<Product>)->Void){
         var products: [Product] = []
-                // products information
-                // https://shopify.dev/api/storefront/2022-04/queries/products
-                // product field : https://shopify.dev/api/storefront/2022-04/objects/Product#fields
-                let productsQuery = Storefront.buildQuery { $0
-                    .products(first: numbersOfProducts) { $0
-                        .edges { $0
-                        .node { $0
-                            .handle()
-                            .title()
-                            .description()
-                            .images(first: 5) { $0
-                                .edges { $0
-                                    .node { $0
-                                        .url()
-                                    }
-                                }
-                            }
-                            .priceRange { $0
-                                .maxVariantPrice { $0
-                                    .amount()
-                                    .currencyCode()
-                                }
-                                .minVariantPrice{ $0
-                                    .amount()
-                                    .currencyCode()
+        // products information
+        // https://shopify.dev/api/storefront/2022-04/queries/products
+        // product field : https://shopify.dev/api/storefront/2022-04/objects/Product#fields
+        let productsQuery = Storefront.buildQuery { $0
+            .products(first: numbersOfProducts) { $0
+                .edges { $0
+                    .node { $0
+                        .handle()
+                        .title()
+                        .description()
+                        .images(first: 5) { $0
+                            .edges { $0
+                                .node { $0
+                                    .url()
                                 }
                             }
                         }
+                        .priceRange { $0
+                            .maxVariantPrice { $0
+                                .amount()
+                                .currencyCode()
+                            }
+                            .minVariantPrice{ $0
+                                .amount()
+                                .currencyCode()
+                            }
                         }
                     }
                 }
+            }
+        }
         
-                let productsTask = client.queryGraphWith(productsQuery) { response, error in
-                    
-                    // Unwrap response data
-                    guard let data = response else {
-                        print("jsonData error in getProductInfor")
-                        return
-                    }
-                    
-                    for item in data.products.edges {
-                        
-                        var images: [UIImage] = []
-                        for image in item.node.images.edges {
-                            let productImage = UIImage(url: image.node.url)
-                            images.append(productImage)
-                        }
-                        
-                        let product: Product = Product(
-                            title: item.node.title,
-                            description: item.node.description,
-                            price: item.node.priceRange.maxVariantPrice.amount,
-                            images: images,
-                            handle: item.node.handle
-                        )
-                        products.append(product)
-                        completion(products)
-                    }
-                    
+        let productsTask = client.queryGraphWith(productsQuery) { response, error in
+            
+            // Unwrap response data
+            guard let data = response else {
+                print("jsonData error in getProductInfor")
+                return
+            }
+            
+            for item in data.products.edges {
+                
+                var images: [UIImage] = []
+                for image in item.node.images.edges {
+                    let productImage = UIImage(url: image.node.url)
+                    images.append(productImage)
                 }
-                productsTask.resume()
-    
-                // End of products information
+                
+                let product: Product = Product(
+                    title: item.node.title,
+                    description: item.node.description,
+                    price: item.node.priceRange.maxVariantPrice.amount,
+                    images: images,
+                    handle: item.node.handle
+                )
+                products.append(product)
+                completion(products)
+            }
+            
+        }
+        productsTask.resume()
+        
+        // End of products information
     }
     
-    static func fetchProducts(numbersOfProducts: Int32){
-        
-        let items = PublishSubject<[Product]>()
+    public func fetchProducts(numbersOfProducts: Int32){
         
         var products: [Product] = []
-                // products information
-                // https://shopify.dev/api/storefront/2022-04/queries/products
-                // product field : https://shopify.dev/api/storefront/2022-04/objects/Product#fields
-                let productsQuery = Storefront.buildQuery { $0
-                    .products(first: numbersOfProducts) { $0
-                        .edges { $0
-                        .node { $0
-                            .handle()
-                            .title()
-                            .description()
-                            .images(first: 5) { $0
-                                .edges { $0
-                                    .node { $0
-                                        .url()
-                                    }
-                                }
-                            }
-                            .priceRange { $0
-                                .maxVariantPrice { $0
-                                    .amount()
-                                    .currencyCode()
-                                }
-                                .minVariantPrice{ $0
-                                    .amount()
-                                    .currencyCode()
+        // products information
+        // https://shopify.dev/api/storefront/2022-04/queries/products
+        // product field : https://shopify.dev/api/storefront/2022-04/objects/Product#fields
+        let productsQuery = Storefront.buildQuery { $0
+            .products(first: numbersOfProducts) { $0
+                .edges { $0
+                    .node { $0
+                        .handle()
+                        .title()
+                        .description()
+                        .images(first: 5) { $0
+                            .edges { $0
+                                .node { $0
+                                    .url()
                                 }
                             }
                         }
+                        .priceRange { $0
+                            .maxVariantPrice { $0
+                                .amount()
+                                .currencyCode()
+                            }
+                            .minVariantPrice{ $0
+                                .amount()
+                                .currencyCode()
+                            }
                         }
                     }
                 }
+            }
+        }
         
-                let productsTask = client.queryGraphWith(productsQuery) { response, error in
-                    
-                    // Unwrap response data
-                    guard let data = response else {
-                        print("jsonData error in getProductInfor")
-                        return
-                    }
-                    
-                    for item in data.products.edges {
-                        
-                        var images: [UIImage] = []
-                        for image in item.node.images.edges {
-                            let productImage = UIImage(url: image.node.url)
-                            images.append(productImage)
-                        }
-                        
-                        let product: Product = Product(
-                            title: item.node.title,
-                            description: item.node.description,
-                            price: item.node.priceRange.maxVariantPrice.amount,
-                            images: images,
-                            handle: item.node.handle
-                        )
-                        products.append(product)
-                        
-                        items.onNext(products)
-                        items.onCompleted()
-                    }
-                    
+        let productsTask = ShopifyClient.client.queryGraphWith(productsQuery) { response, error in
+            
+            // Unwrap response data
+            guard let data = response else {
+                print("jsonData error in getProductInfor")
+                return
+            }
+            
+            for item in data.products.edges {
+                
+                var images: [UIImage] = []
+                for image in item.node.images.edges {
+                    let productImage = UIImage(url: image.node.url)
+                    images.append(productImage)
                 }
-                productsTask.resume()
-    
-                // End of products information
+                
+                let product: Product = Product(
+                    title: item.node.title,
+                    description: item.node.description,
+                    price: item.node.priceRange.maxVariantPrice.amount,
+                    images: images,
+                    handle: item.node.handle
+                )
+                products.append(product)
+                
+            }
+            self.items.onNext(products)
+            self.items.onCompleted()
+            
+        }
+        productsTask.resume()
+        
+        // End of products information
     }
     
 }
